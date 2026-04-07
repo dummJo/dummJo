@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/banner.svg" width="100%" alt="Adam Muhammad"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0,0f0e0b,50,090807,100,0f0e0b&height=280&text=Adam%20Muhammad&fontSize=58&fontColor=C9A84C&fontAlignY=42&desc=ENGINEER%20%20%C2%B7%20%20INTEGRATOR%20%20%C2%B7%20%20BUILDER&descSize=14&descAlignY=62&descFontColor=9a8660&animation=twinkling" width="100%" alt="Adam Muhammad"/>
 
 <br/>
 
@@ -83,9 +83,13 @@ SCADA & IoT              ·  Remote Monitoring · DCS · IEC Functional Safety (
 
 <div align="center">
 
-![](https://img.shields.io/badge/7%2B%20years%20in%20the%20field-1a1508?style=flat-square&labelColor=1a1508&color=1a1508&logoColor=C9A84C)&nbsp;
-![](https://img.shields.io/badge/50%2B%20projects-1a1508?style=flat-square&labelColor=1a1508&color=1a1508)&nbsp;
-![](https://img.shields.io/badge/Jakarta%20%26%20Bali-1a1508?style=flat-square&labelColor=1a1508&color=1a1508)&nbsp;
-![](https://img.shields.io/badge/Available%20Worldwide-1a1508?style=flat-square&labelColor=1a1508&color=1a1508)
+![](https://img.shields.io/badge/7%2B%20years%20in%20the%20field-111009?style=flat-square&labelColor=111009&color=1a1508)&nbsp;
+![](https://img.shields.io/badge/50%2B%20projects-111009?style=flat-square&labelColor=111009&color=1a1508)&nbsp;
+![](https://img.shields.io/badge/Jakarta%20%26%20Bali-111009?style=flat-square&labelColor=111009&color=1a1508)&nbsp;
+![](https://img.shields.io/badge/Available%20Worldwide-111009?style=flat-square&labelColor=111009&color=1a1508)
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0,0f0e0b,50,090807,100,0f0e0b&height=100&section=footer" width="100%"/>
 
 </div>
