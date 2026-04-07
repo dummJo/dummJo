@@ -14,24 +14,18 @@
         90%  { transform: translate(3%,-2%); }
         100% { transform: translate(0,0); }
       }
-      @keyframes fadeUp {
-        from { opacity:0; transform:translateY(10px); }
-        to   { opacity:1; transform:translateY(0); }
-      }
       @keyframes pulse {
-        0%,100% { filter:drop-shadow(0 0 6px #C9A84C77); }
-        50%     { filter:drop-shadow(0 0 20px #C9A84CAA); }
+        0%,100% { filter:drop-shadow(0 0 4px #C9A84C55); }
+        50%     { filter:drop-shadow(0 0 18px #C9A84C99); }
       }
       @keyframes drawLine {
         from { stroke-dashoffset: 300; }
         to   { stroke-dashoffset: 0; }
       }
       .grain-layer { animation: grain 0.35s steps(1) infinite; }
-      .title  { animation: fadeUp 1.2s ease 0.2s both, pulse 4s ease-in-out 1.5s infinite; }
-      .sub    { animation: fadeUp 1.2s ease 0.7s both; }
-      .deco   { animation: fadeUp 1.8s ease 0.4s both; }
-      .line-left  { stroke-dasharray: 300; animation: drawLine 1.2s ease 0.5s both; }
-      .line-right { stroke-dasharray: 300; animation: drawLine 1.2s ease 0.7s both; }
+      .title       { animation: pulse 4s ease-in-out infinite; }
+      .line-left   { stroke-dasharray: 300; animation: drawLine 1.5s ease 0s both; }
+      .line-right  { stroke-dasharray: 300; animation: drawLine 1.5s ease 0.2s both; }
     </style>
     <filter id="noise" x="-5%" y="-5%" width="110%" height="110%">
       <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" stitchTiles="stitch" result="n">
@@ -41,8 +35,8 @@
       <feBlend in="SourceGraphic" in2="gray" mode="overlay"/>
     </filter>
     <filter id="glow" x="-20%" y="-80%" width="140%" height="260%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="b"/>
-      <feFlood flood-color="#C9A84C" flood-opacity="0.5" result="c"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="b"/>
+      <feFlood flood-color="#C9A84C" flood-opacity="0.45" result="c"/>
       <feComposite in="c" in2="b" operator="in" result="g"/>
       <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
@@ -59,7 +53,7 @@
     </linearGradient>
     <radialGradient id="vig" cx="50%" cy="50%" r="70%">
       <stop offset="60%"  stop-color="transparent"/>
-      <stop offset="100%" stop-color="#000" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
     </radialGradient>
   </defs>
 
@@ -72,10 +66,8 @@
   <line class="line-left"  x1="80"  y1="140" x2="370"  y2="140" stroke="#C9A84C" stroke-width="0.6" opacity="0.4"/>
   <line class="line-right" x1="830" y1="140" x2="1120" y2="140" stroke="#C9A84C" stroke-width="0.6" opacity="0.4"/>
 
-  <g class="deco">
-    <polygon points="72,140 80,132 88,140 80,148" fill="#C9A84C" opacity="0.65"/>
-    <polygon points="1112,140 1120,132 1128,140 1120,148" fill="#C9A84C" opacity="0.65"/>
-  </g>
+  <polygon points="72,140 80,132 88,140 80,148" fill="#C9A84C" opacity="0.6"/>
+  <polygon points="1112,140 1120,132 1128,140 1120,148" fill="#C9A84C" opacity="0.6"/>
 
   <text class="title" x="600" y="122"
     text-anchor="middle" fill="#C9A84C"
@@ -83,8 +75,8 @@
     font-size="62" font-weight="bold" letter-spacing="4"
     filter="url(#glow)">Adam Muhammad</text>
 
-  <text class="sub" x="600" y="168"
+  <text x="600" y="168"
     text-anchor="middle" fill="#9a8660"
     font-family="Georgia,serif"
-    font-size="15" letter-spacing="7">ENGINEER  ·  INTEGRATOR  ·  BUILDER</text>
+    font-size="15" letter-spacing="7">ENGINEER  &#xB7;  INTEGRATOR  &#xB7;  BUILDER</text>
 </svg>
