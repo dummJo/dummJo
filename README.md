@@ -83,15 +83,9 @@ SCADA & IoT              ·  Remote Monitoring · DCS · IEC Functional Safety (
 
 <div align="center">
 
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=dummJo&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=C9A84C&icon_color=C9A84C&text_color=8b7355)](https://github.com/dummJo)
-
-<br/>
-
-![](https://img.shields.io/badge/7%2B%20years%20in%20the%20field-0d1117?style=flat-square&labelColor=0d1117&color=1a1508)&nbsp;
-![](https://img.shields.io/badge/50%2B%20projects%20delivered-0d1117?style=flat-square&labelColor=0d1117&color=1a1508)&nbsp;
-![](https://img.shields.io/badge/Jakarta%20%26%20Bali-0d1117?style=flat-square&labelColor=0d1117&color=1a1508)&nbsp;
-![](https://img.shields.io/badge/Available%20Worldwide-0d1117?style=flat-square&labelColor=0d1117&color=1a1508)
+![](https://img.shields.io/badge/7%2B%20years%20in%20the%20field-1a1508?style=flat-square&labelColor=1a1508&color=1a1508&logoColor=C9A84C)&nbsp;
+![](https://img.shields.io/badge/50%2B%20projects-1a1508?style=flat-square&labelColor=1a1508&color=1a1508)&nbsp;
+![](https://img.shields.io/badge/Jakarta%20%26%20Bali-1a1508?style=flat-square&labelColor=1a1508&color=1a1508)&nbsp;
+![](https://img.shields.io/badge/Available%20Worldwide-1a1508?style=flat-square&labelColor=1a1508&color=1a1508)
 
 </div>
-
-<img src="./assets/banner.svg" width="100%" alt="" style="transform:scaleY(-1);opacity:0.4"/>
