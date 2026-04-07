@@ -1,20 +1,12 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0,0d1117,20,1a1209,100,0d1117&height=140&section=header&text=Adam%20Muhammad&fontSize=36&fontColor=C9A84C&fontAlignY=55&desc=Engineer%20%C2%B7%20Integrator%20%C2%B7%20Builder&descSize=14&descAlignY=78&descFontColor=8b7355" width="100%"/>
+<img src="./assets/banner.svg" width="100%" alt="Adam Muhammad"/>
 
 <br/>
 
 [![Website](https://img.shields.io/badge/dummjo.dev-0d1117?style=for-the-badge&logo=vercel&logoColor=C9A84C)](https://dummjo.dev)&nbsp;
 [![Email](https://img.shields.io/badge/contact-0d1117?style=for-the-badge&logo=gmail&logoColor=C9A84C)](mailto:1437yb@gmail.com)&nbsp;
 [![GitHub](https://img.shields.io/badge/dummJo-0d1117?style=for-the-badge&logo=github&logoColor=C9A84C)](https://github.com/dummJo)
-
-<br/>
-
-*PT Prima Tekindo Tirta Sejahtera (PTTS) · ABB Value Partner · Jakarta, Indonesia*
-
-<br/>
-
-> *"The noblest pleasure is the joy of understanding."*
 
 </div>
 
@@ -95,11 +87,11 @@ SCADA & IoT              ·  Remote Monitoring · DCS · IEC Functional Safety (
 
 <br/>
 
-![](https://img.shields.io/badge/7%2B%20years%20in%20the%20field-0d1117?style=flat-square&logoColor=C9A84C)&nbsp;
-![](https://img.shields.io/badge/50%2B%20projects%20delivered-0d1117?style=flat-square&logoColor=C9A84C)&nbsp;
-![](https://img.shields.io/badge/Jakarta%20%26%20Bali-0d1117?style=flat-square&logoColor=C9A84C)&nbsp;
-![](https://img.shields.io/badge/Available%20Worldwide-0d1117?style=flat-square&logoColor=C9A84C)
+![](https://img.shields.io/badge/7%2B%20years%20in%20the%20field-0d1117?style=flat-square&labelColor=0d1117&color=1a1508)&nbsp;
+![](https://img.shields.io/badge/50%2B%20projects%20delivered-0d1117?style=flat-square&labelColor=0d1117&color=1a1508)&nbsp;
+![](https://img.shields.io/badge/Jakarta%20%26%20Bali-0d1117?style=flat-square&labelColor=0d1117&color=1a1508)&nbsp;
+![](https://img.shields.io/badge/Available%20Worldwide-0d1117?style=flat-square&labelColor=0d1117&color=1a1508)
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0,0d1117,20,1a1209,100,0d1117&height=100&section=footer" width="100%"/>
+<img src="./assets/banner.svg" width="100%" alt="" style="transform:scaleY(-1);opacity:0.4"/>
