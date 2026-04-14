@@ -14,7 +14,7 @@
 
 ---
 
-I work at the intersection of **industrial engineering and applied software** — full project lifecycle from technical proposal through commissioning. Available for consulting in automation, power quality, and software integration.
+I work at the intersection of **industrial engineering and applied software** — full project lifecycle from technical proposal through commissioning.
 
 ---
 
@@ -23,7 +23,7 @@ I work at the intersection of **industrial engineering and applied software** �
 ### ⚙️ &nbsp;Industrial & Electrical
 
 ```
-Variable Speed Drives    ·  ABB · Siemens · Danfoss
+Variable Speed Drives    ·  ABB
 Crane Control            ·  Anti-Sway · Load Weighing · STO  (ACS880 + N5050)
 Power Quality            ·  THD Analysis · Active Harmonic Filters · Voltage Sag
 PLC Programming          ·  ABB · Siemens · Allen Bradley
