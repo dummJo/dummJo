@@ -29,10 +29,21 @@
 
 ### 📊 &nbsp;GitHub Analytics
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=dummJo&show_icons=true&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&border_color=1a1508&hide_border=false" alt="GitHub Stats" height="180px" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dummJo&layout=compact&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&border_color=1a1508&hide_border=false" alt="Top Languages" height="180px" />
-  <br/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=dummJo&theme=vue-dark&background=0d1117&title=C9A84C&text=9a8660&sideLabels=9a8660&sideNums=C9A84C&stroke=1a1508&ring=C9A84C&fire=C9A84C&currStreakLabel=C9A84C&currStreakNum=C9A84C&border=1a1508&hide_border=false" alt="GitHub Streak" height="180px" />
+  <table border="0">
+    <tr>
+      <td align="center" style="padding: 10px;">
+        <img src="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true" alt="GitHub Stats" height="180px" />
+      </td>
+      <td align="center" style="padding: 10px;">
+        <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true" alt="Top Languages" height="180px" />
+      </td>
+    </tr>
+    <tr>
+      <td align="center" colspan="2" style="padding: 10px;">
+        <img src="https://streak-stats.demolab.com/?user=dummJo&theme=vue-dark&background=0d1117&title=C9A84C&text=9a8660&sideLabels=9a8660&sideNums=C9A84C&stroke=1a1508&ring=C9A84C&fire=C9A84C&currStreakLabel=C9A84C&currStreakNum=C9A84C&hide_border=true" alt="GitHub Streak" height="180px" />
+      </td>
+    </tr>
+  </table>
 </div>
 
 <div align="right">
@@ -53,10 +64,10 @@
 ### ⚙️ &nbsp;Industrial & Electrical expertise
 ```text
 Variable Speed Drives    ·  ABB (ACS580, ACS880)
-Crane Control            ·  Anti-Sway · Load Weighing · STO (N5050)
+Crane Control            ·  Anti-Sway · Load Weighing · (N5050)
 Power Quality            ·  THD Analysis · Active Harmonic Filters
-PLC Programming          ·  ABB · Siemens · Allen Bradley
-SCADA & IoT              ·  Remote Monitoring · DCS · IEC Safety
+PLC Programming          ·  ABB · Siemens ·
+SCADA & IoT              ·  Remote Monitoring · IEC Safety
 ```
 
 <br/>
@@ -67,11 +78,11 @@ SCADA & IoT              ·  Remote Monitoring · DCS · IEC Safety
 
 | Year | Project | Focus |
 |:----:|---------|-------|
-| 2022– | **Crane Automation** — ABB ACS880 + N5050 | Cilegon Industrial Corridor |
+| 2022– | **Crane Automation** — ABB ACS880 + N5050 | Caterpillar Batam Industrial Corridor |
 | 2025 | **n8n Operations Automation** | Internal Workflow Layer (LLM) |
 | 2024– | **AI & Automation Tools** | TypeScript · LLM Integration |
 | ∞ | **Power Quality Remediation** | Active Filters · THD Analysis |
-| 2023– | **ICSS Integration** | F&B · Industrial · DCS |
+| 2023– | **System Integration** | F&B · Industrial · |
 
 <br/>
 
@@ -81,9 +92,9 @@ SCADA & IoT              ·  Remote Monitoring · DCS · IEC Safety
 ```text
 2018  ·  Casio Manufacturing internship — Nakhon Ratchasima, Thailand
 2019  ·  Electrical field engineer — industrial sites across Java
-2020  ·  First solo VSD commissioning — ABB ACS580
+2020  ·  First solo VSD commissioning — ABB ACQ580
 2022  ·  First ABB N5050 Crane deployment — Cilegon
-2024  ·  ABB Channel Partner Expert Day — Shanghai (30+ countries)
+2024  ·  ABB Channel Partner Expert Day — Shanghai
 2025  ·  Presales Engineer & System Integrator — PTTS
 ```
 
