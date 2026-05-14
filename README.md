@@ -1,19 +1,21 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0,0d1117,50,090807,100,0d1117&height=200&text=ADAM%20MUHAMMAD&fontSize=60&fontColor=C9A84C&fontAlignY=40&desc=ENGINEER%20%20%C2%B7%20%20INTEGRATOR%20%20%C2%B7%20%20BUILDER&descSize=16&descAlignY=60&descFontColor=9a8660&animation=twinkling&fontFamily=Inter" width="100%" alt="Adam Muhammad"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0,0d1117,50,090807,100,0d1117&height=180&text=ADAM%20MUHAMMAD&fontSize=50&fontColor=C9A84C&fontAlignY=40&desc=ENGINEER%20%20%C2%B7%20%20INTEGRATOR%20%20%C2%B7%20%20BUILDER&descSize=14&descAlignY=60&descFontColor=9a8660&animation=twinkling&fontFamily=Inter" width="100%" alt="Adam Muhammad"/>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=400&size=20&duration=3000&pause=1000&color=C9A84C&center=true&vCenter=true&width=600&lines=Industrial+Automation;System+Integrator;ABB+Specialist;IIoT+Architecture;Mission+Critical+Systems" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=400&size=18&duration=3000&pause=1000&color=C9A84C&center=true&vCenter=true&width=600&lines=Industrial+Automation;System+Integrator;ABB+Specialist;IIoT+Architecture;Mission+Critical+Systems" alt="Typing SVG" />
 </p>
+
+<div align="center">
+  <img src="https://ip-location.vercel.app/api?username=dummJo" alt="Visitor Info" />
+</div>
+
+<br/>
 
 [![Website](https://img.shields.io/badge/dummjo.dev-0d1117?style=flat-square&logo=vercel&logoColor=C9A84C)](https://dummjo.dev)&nbsp;
 [![Email](https://img.shields.io/badge/contact-0d1117?style=flat-square&logo=gmail&logoColor=C9A84C)](mailto:1437yb@gmail.com)&nbsp;
 [![GitHub](https://img.shields.io/badge/dummJo-0d1117?style=flat-square&logo=github&logoColor=C9A84C)](https://github.com/dummJo)&nbsp;
 <img src="https://komarev.com/ghpvc/?username=dummJo&color=C9A84C&style=flat-square&label=VIEWS" alt="Views" valign="middle" />
-
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=400&size=16&duration=2000&pause=500&color=9a8660&center=true&vCenter=true&width=600&lines=%5B%3E%5D+INITIALIZING+DIAGNOSTIC+SEQUENCES...;%5B%3E%5D+DETECTING+CLIENT+NODE...+%5BOK%5D;%5B%3E%5D+ESTABLISHING+SECURE+TUNNEL...+%5BACTIVE%5D;%5B%3E%5D+LOCAL+TIME+SYNCED...+%5BTRACKING%5D" alt="Diagnostic Terminal" />
-</p>
 
 </div>
 
