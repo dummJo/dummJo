@@ -30,15 +30,15 @@
       </td>
     </tr>
     <tr>
-      <td align="center" style="padding-top: 5px;">
+      <td align="center" style="padding-top: 2px;">
         <img src="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true&rank_icon=github" alt="Stats" height="150px" />
       </td>
-      <td align="center" style="padding-top: 5px;">
+      <td align="center" style="padding-top: 2px;">
         <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true" alt="Langs" height="150px" />
       </td>
     </tr>
     <tr>
-      <td align="center" colspan="2" style="padding-top: 5px;">
+      <td align="center" colspan="2" style="padding-top: 2px;">
         <img src="https://streak-stats.demolab.com/?user=dummJo&theme=vue-dark&background=0d1117&title=C9A84C&text=9a8660&sideLabels=9a8660&sideNums=C9A84C&stroke=1a1508&ring=C9A84C&fire=C9A84C&currStreakLabel=C9A84C&currStreakNum=C9A84C&hide_border=true" alt="Streak" height="150px" />
       </td>
     </tr>
