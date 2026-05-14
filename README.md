@@ -1,6 +1,12 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0,0f0e0b,50,090807,100,0f0e0b&height=280&text=Adam%20Muhammad&fontSize=58&fontColor=C9A84C&fontAlignY=42&desc=ENGINEER%20%20%C2%B7%20%20INTEGRATOR%20%20%C2%B7%20%20BUILDER&descSize=14&descAlignY=62&descFontColor=9a8660&animation=twinkling" width="100%" alt="Adam Muhammad"/>
+<img src="assets/anime_banner.png" width="100%" style="border-radius: 10px; box-shadow: 0 0 20px rgba(201, 168, 76, 0.3);" alt="Anime Engineer Banner"/>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=100&text=ADAM%20MUHAMMAD&fontSize=70&fontColor=C9A84C&animation=fadeIn&fontAlignY=50" width="100%"/>
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Georgia&size=24&duration=3000&pause=1000&color=C9A84C&center=true&vCenter=true&width=600&lines=ENGINEER;INTEGRATOR;BUILDER;SYSTEM+ARCHITECT;ABB+SPECIALIST" alt="Typing SVG" />
+</p>
 
 <br/>
 
@@ -8,19 +14,6 @@
 [![Email](https://img.shields.io/badge/contact-0d1117?style=for-the-badge&logo=gmail&logoColor=C9A84C)](mailto:1437yb@gmail.com)&nbsp;
 [![GitHub](https://img.shields.io/badge/dummJo-0d1117?style=for-the-badge&logo=github&logoColor=C9A84C)](https://github.com/dummJo)
 
-</div>
-
-<br/>
-
----
-
-### 🕹️ &nbsp;Pac-Man Contribution Graph
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg">
-    <img src="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg" alt="Pac-Man contribution graph" width="100%" />
-  </picture>
 </div>
 
 <br/>
@@ -54,49 +47,72 @@
 
 ---
 
-### 🛠️ &nbsp;Tech Stack & Tools
+### 💠 &nbsp;Core Subsystems / Tech Stack
 <div align="center">
   <img src="https://skillicons.dev/icons?i=ts,nodejs,nextjs,docker,linux,py,cpp,bash,git,github,vscode,postgres,mongodb,redis,nginx,aws&theme=dark" alt="Tech Stack" />
 </div>
 
 <br/>
 
-### ⚙️ &nbsp;Industrial & Electrical expertise
+### ⚙️ &nbsp;Industrial Protocols & Expert Systems
+<div align="left">
+
 ```text
-Variable Speed Drives    ·  ABB (ACS580, ACS880)
-Crane Control            ·  Anti-Sway · Load Weighing · (N5050)
-Power Quality            ·  THD Analysis · Active Harmonic Filters
-PLC Programming          ·  ABB · Siemens ·
-SCADA & IoT              ·  Remote Monitoring · IEC Safety
+[DRIVE_CONTROL]    ·  ABB ACS580 / ACS880 / ACQ580
+[AUTOMATION]       ·  Crane Control (N5050) / Anti-Sway / STO
+[ENERGY_LAYER]     ·  Power Quality / THD Analysis / Harmonic Filters
+[LOGIC_CORE]       ·  PLC Programming (ABB / Siemens / AB)
+[INTERFACE]        ·  SCADA / IoT / Remote Monitoring / IEC Safety
 ```
+
+</div>
 
 <br/>
 
 ---
 
-### 🏗️ &nbsp;Selected Work & Milestones
+### 🏗️ &nbsp;Deployment History / Selected Work
 
-| Year | Project | Focus |
+| Year | Project | Sector |
 |:----:|---------|-------|
-| 2022– | **Crane Automation** — ABB ACS880 + N5050 | Caterpillar Batam Industrial Corridor |
+| 2022– | **Crane Automation** — ABB ACS880 + N5050 | Caterpillar Batam Industrial |
 | 2025 | **n8n Operations Automation** | Internal Workflow Layer (LLM) |
 | 2024– | **AI & Automation Tools** | TypeScript · LLM Integration |
 | ∞ | **Power Quality Remediation** | Active Filters · THD Analysis |
-| 2023– | **System Integration** | F&B · Industrial · |
+| 2023– | **System Integration** | F&B · Industrial · ICSS |
 
 <br/>
 
 ---
 
-### 📜 &nbsp;The Record
+### 📡 &nbsp;Neural Activity / Contribution Graph
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg">
+    <img src="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg" alt="Pac-Man contribution graph" width="100%" />
+  </picture>
+</div>
+
+<br/>
+
+---
+
+### 💾 &nbsp;Mission Logs / The Record
+<div align="left">
+
 ```text
-2018  ·  Casio Manufacturing internship — Nakhon Ratchasima, Thailand
-2019  ·  Electrical field engineer — industrial sites across Java
-2020  ·  First solo VSD commissioning — ABB ACQ580
-2022  ·  First ABB N5050 Crane deployment — Cilegon
-2024  ·  ABB Channel Partner Expert Day — Shanghai
-2025  ·  Presales Engineer & System Integrator — PTTS
+[LOG_START]
+2018  ·  CASIO MFG INTERNSHIP — NAKHON RATCHASIMA, THAILAND
+2019  ·  ELECTRICAL FIELD ENGINEER — [PTTS]
+2020  ·  SOLO VSD COMMISSIONING — ABB ACQ580 [PTTS]
+2022  ·  ABB N5050 CRANE DEPLOYMENT — CILEGON [PTTS]
+2024  ·  ABB EXPERT DAY — SHANGHAI [PTTS]
+2025  ·  SYSTEM INTEGRATOR — [PTTS]
+[LOG_END]
 ```
+
+</div>
 
 <br/>
 
