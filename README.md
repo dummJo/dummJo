@@ -16,7 +16,7 @@
 
 ### 🕹️ &nbsp;Pac-Man Contribution Graph
 <div align="center">
-  <img src="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman.svg" alt="Pac-Man Graph" width="100%" />
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph-dark.svg" alt="Pac-Man Graph" width="100%" />
 </div>
 
 <br/>
