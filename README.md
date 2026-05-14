@@ -11,6 +11,10 @@
 [![GitHub](https://img.shields.io/badge/dummJo-0d1117?style=flat-square&logo=github&logoColor=C9A84C)](https://github.com/dummJo)&nbsp;
 <img src="https://komarev.com/ghpvc/?username=dummJo&color=C9A84C&style=flat-square&label=VIEWS" alt="Views" valign="middle" />
 
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=400&size=16&duration=2000&pause=500&color=9a8660&center=true&vCenter=true&width=600&lines=%5B%3E%5D+INITIALIZING+DIAGNOSTIC+SEQUENCES...;%5B%3E%5D+DETECTING+CLIENT+NODE...+%5BOK%5D;%5B%3E%5D+ESTABLISHING+SECURE+TUNNEL...+%5BACTIVE%5D;%5B%3E%5D+LOCAL+TIME+SYNCED...+%5BTRACKING%5D" alt="Diagnostic Terminal" />
+</p>
+
 </div>
 
 ---
