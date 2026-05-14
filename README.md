@@ -7,7 +7,9 @@
 </p>
 
 <div align="center">
-  <img src="https://ip-location.vercel.app/api?username=dummJo&ip_color=C9A84C&label_color=9a8660&location_color=9a8660&isp_color=9a8660&time_color=9a8660&v=1" alt="Visitor Info" />
+  
+![Visitor Info](https://visitor-info-badge.vercel.app/api?username=dummJo&v=1.2)
+
 </div>
 
 <br/>
