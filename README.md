@@ -8,41 +8,41 @@
 
 [![Website](https://img.shields.io/badge/dummjo.dev-0d1117?style=flat-square&logo=vercel&logoColor=C9A84C)](https://dummjo.dev)&nbsp;
 [![Email](https://img.shields.io/badge/contact-0d1117?style=flat-square&logo=gmail&logoColor=C9A84C)](mailto:1437yb@gmail.com)&nbsp;
-[![GitHub](https://img.shields.io/badge/dummJo-0d1117?style=flat-square&logo=github&logoColor=C9A84C)](https://github.com/dummJo)
+[![GitHub](https://img.shields.io/badge/dummJo-0d1117?style=flat-square&logo=github&logoColor=C9A84C)](https://github.com/dummJo)&nbsp;
+<img src="https://komarev.com/ghpvc/?username=dummJo&color=C9A84C&style=flat-square&label=VIEWS" alt="Views" valign="middle" />
 
 </div>
 
-<br/>
+---
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=30&text=🕹️%20Neural%20Activity%20&%20Metrics&fontSize=16&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
+
 <div align="center">
-  <table border="0">
-    <tr>
-      <td width="65%" align="left">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph-dark.svg">
-          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg">
-          <img src="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg" alt="Pac-Man" width="100%" />
-        </picture>
-      </td>
-      <td width="35%" align="right" valign="bottom">
-        <img src="https://komarev.com/ghpvc/?username=dummJo&color=C9A84C&style=flat-square&label=VIEWS" alt="Views" />
-      </td>
-    </tr>
-    <tr>
-      <td align="center" style="padding-top: 2px;">
-        <img src="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true&rank_icon=github" alt="Stats" height="150px" />
-      </td>
-      <td align="center" style="padding-top: 2px;">
-        <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true" alt="Langs" height="150px" />
-      </td>
-    </tr>
-    <tr>
-      <td align="center" colspan="2" style="padding-top: 2px;">
-        <img src="https://streak-stats.demolab.com/?user=dummJo&theme=vue-dark&background=0d1117&title=C9A84C&text=9a8660&sideLabels=9a8660&sideNums=C9A84C&stroke=1a1508&ring=C9A84C&fire=C9A84C&currStreakLabel=C9A84C&currStreakNum=C9A84C&hide_border=true" alt="Streak" height="150px" />
-      </td>
-    </tr>
-  </table>
+  
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg" alt="Pac-Man" width="100%" />
+</picture>
+
+<br/>
+
+<table border="0">
+  <tr>
+    <td align="center">
+      <img src="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true&rank_icon=github" alt="Stats" height="150px" />
+    </td>
+    <td align="center">
+      <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true" alt="Langs" height="150px" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <img src="https://streak-stats.demolab.com/?user=dummJo&theme=vue-dark&background=0d1117&title=C9A84C&text=9a8660&sideLabels=9a8660&sideNums=C9A84C&stroke=1a1508&ring=C9A84C&fire=C9A84C&currStreakLabel=C9A84C&currStreakNum=C9A84C&hide_border=true" alt="Streak" height="150px" />
+    </td>
+  </tr>
+</table>
+
 </div>
 
 
