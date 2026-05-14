@@ -36,7 +36,7 @@
   <table border="0">
     <tr>
       <td align="center" style="padding: 10px;">
-        <img src="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true" alt="GitHub Stats" height="180px" />
+        <img src="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true&rank_icon=github" alt="GitHub Stats" height="180px" />
       </td>
       <td align="center" style="padding: 10px;">
         <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true" alt="Top Languages" height="180px" />
@@ -70,7 +70,7 @@
 Variable Speed Drives    ·  ABB (ACS580, ACS880)
 Crane Control            ·  Anti-Sway · Load Weighing · (N5050)
 Power Quality            ·  THD Analysis · Active Harmonic Filters
-PLC Programming          ·  ABB · Siemens ·
+PLC Programming          ·  ABB · Siemens · Schneider
 SCADA & IoT              ·  Remote Monitoring · IEC Safety
 ```
 
@@ -86,7 +86,7 @@ SCADA & IoT              ·  Remote Monitoring · IEC Safety
 | 2025 | **n8n Operations Automation** | Internal Workflow Layer (LLM) |
 | 2024– | **AI & Automation Tools** | TypeScript · LLM Integration |
 | ∞ | **Power Quality Remediation** | Active Filters · THD Analysis |
-| 2023– | **System Integration** | F&B · Industrial · |
+| 2023– | **System Integration** | F&B · Industrial · DCS |
 
 <br/>
 
@@ -95,11 +95,11 @@ SCADA & IoT              ·  Remote Monitoring · IEC Safety
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=50&text=📜%20Mission%20Logs%20/%20The%20Record&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
 ```text
 2018  ·  Casio Manufacturing internship — Nakhon Ratchasima, Thailand
-2019  ·  Electrical field engineer — industrial sites across Java
-2020  ·  First solo VSD commissioning — ABB ACQ580
-2022  ·  First ABB N5050 Crane deployment — Cilegon
-2024  ·  ABB Channel Partner Expert Day — Shanghai
-2025  ·  Presales Engineer & System Integrator — PTTS
+2019  ·  Electrical field engineer — [PTTS]
+2020  ·  First solo VSD commissioning — ABB ACQ580 [PTTS]
+2022  ·  First ABB N5050 Crane deployment — Cilegon [PTTS]
+2024  ·  ABB Channel Partner Expert Day — Shanghai [PTTS]
+2025  ·  Presales Engineer & System Integrator — [PTTS]
 ```
 
 <br/>
