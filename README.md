@@ -66,13 +66,17 @@
 <br/>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=⚙️%20Industrial%20Protocols%20&%20Expertise&fontSize=20&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
-```text
-Variable Speed Drives    ·  ABB ACS580 / ACS880 / ACQ580
-Crane Automation         ·  Intelligent Systems (N5050) / Anti-Sway
-Power Quality            ·  THD Analysis / Active Harmonic Filters
-PLC Programming          ·  Expert level — ABB / Siemens / Schneider
-Industrial Systems       ·  SCADA / IIoT / Remote Monitoring / Safety
-```
+<div align="left">
+
+| Domain | Systems & Expertise |
+| :--- | :--- |
+| **Motion Control** | `ABB ACS580` `ACS880` `ACQ580` `Variable Speed Drives` |
+| **Automation** | `Crane N5050` `Anti-Sway` `Safe Torque Off` `Load Weighing` |
+| **Energy Layer** | `Power Quality` `THD Analysis` `Active Harmonic Filters` |
+| **Expert Logic** | `PLC Programming` `ABB` `Siemens` `Schneider Electric` |
+| **IIoT Interface** | `SCADA` `Remote Monitoring` `IEC Safety Protocols` |
+
+</div>
 
 <br/>
 
@@ -81,7 +85,7 @@ Industrial Systems       ·  SCADA / IIoT / Remote Monitoring / Safety
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=🏗️%20Selected%20Work%20&%20Milestones&fontSize=20&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
 
 | Year | Project | Focus |
-|:----:|---------|-------|
+| :----: | --------- | ------- |
 | 2022– | **Crane Automation** — ABB ACS880 + N5050 | Caterpillar Batam Industrial Corridor |
 | 2025 | **n8n Operations Automation** | Internal Workflow Layer (LLM) |
 | 2024– | **AI & Automation Tools** | TypeScript · LLM Integration |
@@ -93,14 +97,18 @@ Industrial Systems       ·  SCADA / IIoT / Remote Monitoring / Safety
 ---
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=📜%20Mission%20Logs%20/%20The%20Record&fontSize=20&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
+<div align="left">
+
 ```text
-2018  ·  Casio Manufacturing Internship — Nakhon Ratchasima, Thailand
-2019  ·  Electrical Field Engineer — PTTS
-2020  ·  First Solo VSD Commissioning — ABB ACQ580
-2022  ·  Crane Automation Deployment — Cilegon
-2024  ·  ABB Channel Partner Expert Day — Shanghai
-2025  ·  Presales Engineer & System Integrator — PTTS
+[2018]  ◈  CASIO MANUFACTURING INTERNSHIP — THAILAND
+[2019]  ◈  ELECTRICAL FIELD ENGINEER — PTTS
+[2020]  ◈  FIRST SOLO VSD COMMISSIONING — ABB ACQ580
+[2022]  ◈  CRANE AUTOMATION DEPLOYMENT — CILEGON
+[2024]  ◈  ABB CHANNEL PARTNER EXPERT DAY — SHANGHAI
+[2025]  ◈  PRESALES ENGINEER & SYSTEM INTEGRATOR — PTTS
 ```
+
+</div>
 
 <br/>
 
