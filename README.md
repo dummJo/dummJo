@@ -18,7 +18,7 @@
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=50&text=🕹️%20Neural%20Activity%20/%20Pac-Man%20Graph&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=🕹️%20Neural%20Activity%20/%20Pac-Man%20Graph&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph-dark.svg">
@@ -31,7 +31,7 @@
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=50&text=📊%20GitHub%20Analytics&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=📊%20GitHub%20Analytics&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
 <div align="center">
   <table border="0">
     <tr>
@@ -58,27 +58,27 @@
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=50&text=💠%20Core%20Subsystems%20/%20Tech%20Stack&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=💠%20Core%20Subsystems%20/%20Tech%20Stack&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
 <div align="center">
   <img src="https://skillicons.dev/icons?i=ts,nodejs,nextjs,docker,linux,py,cpp,bash,git,github,vscode,postgres,mongodb,redis,nginx,aws&theme=dark" alt="Tech Stack" />
 </div>
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=50&text=⚙️%20Industrial%20Protocols%20&%20Expertise&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=⚙️%20Industrial%20Protocols%20&%20Expertise&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
 ```text
-[DRIVE_CONTROL]    ·  Advanced VSD · ABB ACS580 / ACS880 / ACQ580
-[AUTOMATION]       ·  Intelligent Crane Systems (N5050) · Anti-Sway
-[ENERGY_LAYER]     ·  Power Quality · THD Analysis · Harmonic Filters
-[LOGIC_CORE]       ·  Expert PLC Programming · ABB · Siemens · Schneider
-[INTERFACE]        ·  SCADA · IIoT · Remote Monitoring · IEC Safety
+Variable Speed Drives    ·  ABB ACS580 / ACS880 / ACQ580
+Crane Automation         ·  Intelligent Systems (N5050) / Anti-Sway
+Power Quality            ·  THD Analysis / Active Harmonic Filters
+PLC Programming          ·  Expert level — ABB / Siemens / Schneider
+Industrial Systems       ·  SCADA / IIoT / Remote Monitoring / Safety
 ```
 
 <br/>
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=50&text=🏗️%20Selected%20Work%20&%20Milestones&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=🏗️%20Selected%20Work%20&%20Milestones&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
 
 | Year | Project | Focus |
 |:----:|---------|-------|
@@ -92,14 +92,14 @@
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=50&text=📜%20Mission%20Logs%20/%20The%20Record&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=📜%20Mission%20Logs%20/%20The%20Record&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
 ```text
 2018  ·  Casio Manufacturing Internship — Nakhon Ratchasima, Thailand
-2019  ·  Electrical Field Engineering — [PTTS]
-2020  ·  First Solo VSD Commissioning — ABB ACQ580 [PTTS]
-2022  ·  N5050 Crane Automation Deployment — Cilegon [PTTS]
-2024  ·  ABB Channel Partner Expert Convocation — Shanghai [PTTS]
-2025  ·  Presales Engineering & System Integration — [PTTS]
+2019  ·  Electrical Field Engineer — PTTS
+2020  ·  First Solo VSD Commissioning — ABB ACQ580
+2022  ·  Crane Automation Deployment — Cilegon
+2024  ·  ABB Channel Partner Expert Day — Shanghai
+2025  ·  Presales Engineer & System Integrator — PTTS
 ```
 
 <br/>
