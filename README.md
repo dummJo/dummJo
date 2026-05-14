@@ -1,9 +1,9 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0,0d1117,50,090807,100,0d1117&height=300&text=ADAM%20MUHAMMAD&fontSize=70&fontColor=C9A84C&fontAlignY=40&desc=ENGINEER%20%20%C2%B7%20%20INTEGRATOR%20%20%C2%B7%20%20BUILDER&descSize=18&descAlignY=60&descFontColor=9a8660&animation=twinkling" width="100%" alt="Adam Muhammad"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0,0d1117,50,090807,100,0d1117&height=250&text=ADAM%20MUHAMMAD&fontSize=70&fontColor=C9A84C&fontAlignY=40&desc=ENGINEER%20%20%C2%B7%20%20INTEGRATOR%20%20%C2%B7%20%20BUILDER&descSize=18&descAlignY=60&descFontColor=9a8660&animation=twinkling&fontFamily=Inter" width="100%" alt="Adam Muhammad"/>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=400&size=24&duration=3000&pause=1000&color=C9A84C&center=true&vCenter=true&width=600&lines=Industrial+Automation;System+Integrator;ABB+Expert;IIoT+Architecture;Mission+Critical+Systems" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=400&size=24&duration=3000&pause=1000&color=C9A84C&center=true&vCenter=true&width=600&lines=Industrial+Automation;System+Integrator;ABB+Specialist;IIoT+Architecture;Mission+Critical+Systems" alt="Typing SVG" />
 </p>
 
 <br/>
@@ -18,7 +18,7 @@
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=🕹️%20Neural%20Activity%20/%20Pac-Man%20Graph&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=🕹️%20Neural%20Activity%20/%20Pac-Man%20Graph&fontSize=20&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph-dark.svg">
@@ -31,7 +31,7 @@
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=📊%20GitHub%20Analytics&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=📊%20GitHub%20Analytics&fontSize=20&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
 <div align="center">
   <table border="0">
     <tr>
@@ -58,14 +58,14 @@
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=💠%20Core%20Subsystems%20/%20Tech%20Stack&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=💠%20Core%20Subsystems%20/%20Tech%20Stack&fontSize=20&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
 <div align="center">
   <img src="https://skillicons.dev/icons?i=ts,nodejs,nextjs,docker,linux,py,cpp,bash,git,github,vscode,postgres,mongodb,redis,nginx,aws&theme=dark" alt="Tech Stack" />
 </div>
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=⚙️%20Industrial%20Protocols%20&%20Expertise&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=⚙️%20Industrial%20Protocols%20&%20Expertise&fontSize=20&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
 ```text
 Variable Speed Drives    ·  ABB ACS580 / ACS880 / ACQ580
 Crane Automation         ·  Intelligent Systems (N5050) / Anti-Sway
@@ -78,7 +78,7 @@ Industrial Systems       ·  SCADA / IIoT / Remote Monitoring / Safety
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=🏗️%20Selected%20Work%20&%20Milestones&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=🏗️%20Selected%20Work%20&%20Milestones&fontSize=20&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
 
 | Year | Project | Focus |
 |:----:|---------|-------|
@@ -92,7 +92,7 @@ Industrial Systems       ·  SCADA / IIoT / Remote Monitoring / Safety
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=📜%20Mission%20Logs%20/%20The%20Record&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=📜%20Mission%20Logs%20/%20The%20Record&fontSize=20&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
 ```text
 2018  ·  Casio Manufacturing Internship — Nakhon Ratchasima, Thailand
 2019  ·  Electrical Field Engineer — PTTS
