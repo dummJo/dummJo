@@ -7,7 +7,7 @@
 </p>
 
 <div align="center">
-  <img src="https://ip-location.vercel.app/api?username=dummJo" alt="Visitor Info" />
+  <img src="https://dummjo.dev/api/badge" alt="Visitor Info" />
 </div>
 
 <br/>
