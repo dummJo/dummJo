@@ -1,9 +1,9 @@
 <div align="center">
 
-<img src="assets/banner_animated.svg" width="100%" alt="Adam Muhammad Animated Banner"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0,0d1117,50,090807,100,0d1117&height=300&text=ADAM%20MUHAMMAD&fontSize=70&fontColor=C9A84C&fontAlignY=40&desc=ENGINEER%20%20%C2%B7%20%20INTEGRATOR%20%20%C2%B7%20%20BUILDER&descSize=18&descAlignY=60&descFontColor=9a8660&animation=twinkling" width="100%" alt="Adam Muhammad"/>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=400&size=24&duration=3000&pause=1000&color=C9A84C&center=true&vCenter=true&width=600&lines=ENGINEER;INTEGRATOR;BUILDER;ABB+SPECIALIST;SYSTEM+ARCHITECT" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=400&size=24&duration=3000&pause=1000&color=C9A84C&center=true&vCenter=true&width=600&lines=Industrial+Automation;System+Integrator;ABB+Expert;IIoT+Architecture;Mission+Critical+Systems" alt="Typing SVG" />
 </p>
 
 <br/>
@@ -67,11 +67,11 @@
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=50&text=⚙️%20Industrial%20Protocols%20&%20Expertise&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
 ```text
-Variable Speed Drives    ·  ABB (ACS580, ACS880)
-Crane Control            ·  Anti-Sway · Load Weighing · (N5050)
-Power Quality            ·  THD Analysis · Active Harmonic Filters
-PLC Programming          ·  ABB · Siemens · Schneider
-SCADA & IoT              ·  Remote Monitoring · IEC Safety
+[DRIVE_CONTROL]    ·  Advanced VSD · ABB ACS580 / ACS880 / ACQ580
+[AUTOMATION]       ·  Intelligent Crane Systems (N5050) · Anti-Sway
+[ENERGY_LAYER]     ·  Power Quality · THD Analysis · Harmonic Filters
+[LOGIC_CORE]       ·  Expert PLC Programming · ABB · Siemens · Schneider
+[INTERFACE]        ·  SCADA · IIoT · Remote Monitoring · IEC Safety
 ```
 
 <br/>
@@ -94,12 +94,12 @@ SCADA & IoT              ·  Remote Monitoring · IEC Safety
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=50&text=📜%20Mission%20Logs%20/%20The%20Record&fontSize=20&fontColor=C9A84C&fontAlignY=50" width="100%"/>
 ```text
-2018  ·  Casio Manufacturing internship — Nakhon Ratchasima, Thailand
-2019  ·  Electrical field engineer — [PTTS]
-2020  ·  First solo VSD commissioning — ABB ACQ580 [PTTS]
-2022  ·  First ABB N5050 Crane deployment — Cilegon [PTTS]
-2024  ·  ABB Channel Partner Expert Day — Shanghai [PTTS]
-2025  ·  Presales Engineer & System Integrator — [PTTS]
+2018  ·  Casio Manufacturing Internship — Nakhon Ratchasima, Thailand
+2019  ·  Electrical Field Engineering — [PTTS]
+2020  ·  First Solo VSD Commissioning — ABB ACQ580 [PTTS]
+2022  ·  N5050 Crane Automation Deployment — Cilegon [PTTS]
+2024  ·  ABB Channel Partner Expert Convocation — Shanghai [PTTS]
+2025  ·  Presales Engineering & System Integration — [PTTS]
 ```
 
 <br/>
