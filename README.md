@@ -1,80 +1,64 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0,0d1117,50,090807,100,0d1117&height=250&text=ADAM%20MUHAMMAD&fontSize=70&fontColor=C9A84C&fontAlignY=40&desc=ENGINEER%20%20%C2%B7%20%20INTEGRATOR%20%20%C2%B7%20%20BUILDER&descSize=18&descAlignY=60&descFontColor=9a8660&animation=twinkling&fontFamily=Inter" width="100%" alt="Adam Muhammad"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0,0d1117,50,090807,100,0d1117&height=200&text=ADAM%20MUHAMMAD&fontSize=60&fontColor=C9A84C&fontAlignY=40&desc=ENGINEER%20%20%C2%B7%20%20INTEGRATOR%20%20%C2%B7%20%20BUILDER&descSize=16&descAlignY=60&descFontColor=9a8660&animation=twinkling&fontFamily=Inter" width="100%" alt="Adam Muhammad"/>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=400&size=24&duration=3000&pause=1000&color=C9A84C&center=true&vCenter=true&width=600&lines=Industrial+Automation;System+Integrator;ABB+Specialist;IIoT+Architecture;Mission+Critical+Systems" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=400&size=20&duration=3000&pause=1000&color=C9A84C&center=true&vCenter=true&width=600&lines=Industrial+Automation;System+Integrator;ABB+Specialist;IIoT+Architecture;Mission+Critical+Systems" alt="Typing SVG" />
 </p>
 
-<br/>
-
-[![Website](https://img.shields.io/badge/dummjo.dev-0d1117?style=for-the-badge&logo=vercel&logoColor=C9A84C)](https://dummjo.dev)&nbsp;
-[![Email](https://img.shields.io/badge/contact-0d1117?style=for-the-badge&logo=gmail&logoColor=C9A84C)](mailto:1437yb@gmail.com)&nbsp;
-[![GitHub](https://img.shields.io/badge/dummJo-0d1117?style=for-the-badge&logo=github&logoColor=C9A84C)](https://github.com/dummJo)
+[![Website](https://img.shields.io/badge/dummjo.dev-0d1117?style=flat-square&logo=vercel&logoColor=C9A84C)](https://dummjo.dev)&nbsp;
+[![Email](https://img.shields.io/badge/contact-0d1117?style=flat-square&logo=gmail&logoColor=C9A84C)](mailto:1437yb@gmail.com)&nbsp;
+[![GitHub](https://img.shields.io/badge/dummJo-0d1117?style=flat-square&logo=github&logoColor=C9A84C)](https://github.com/dummJo)
 
 </div>
 
 <br/>
 
----
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=🕹️%20Neural%20Activity%20/%20Pac-Man%20Graph&fontSize=20&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg">
-    <img src="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg" alt="Pac-Man contribution graph" width="100%" />
-  </picture>
-</div>
-
-<br/>
-
----
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=📊%20GitHub%20Analytics&fontSize=20&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=30&text=🕹️%20Neural%20Activity%20&%20Metrics&fontSize=16&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
 <div align="center">
   <table border="0">
     <tr>
-      <td align="center" style="padding: 10px;">
-        <img src="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true&rank_icon=github" alt="GitHub Stats" height="180px" />
+      <td width="65%" align="left">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph-dark.svg">
+          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg">
+          <img src="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg" alt="Pac-Man" width="100%" />
+        </picture>
       </td>
-      <td align="center" style="padding: 10px;">
-        <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true" alt="Top Languages" height="180px" />
+      <td width="35%" align="right" valign="bottom">
+        <img src="https://komarev.com/ghpvc/?username=dummJo&color=C9A84C&style=flat-square&label=VIEWS" alt="Views" />
       </td>
     </tr>
     <tr>
-      <td align="center" colspan="2" style="padding: 10px;">
-        <img src="https://streak-stats.demolab.com/?user=dummJo&theme=vue-dark&background=0d1117&title=C9A84C&text=9a8660&sideLabels=9a8660&sideNums=C9A84C&stroke=1a1508&ring=C9A84C&fire=C9A84C&currStreakLabel=C9A84C&currStreakNum=C9A84C&hide_border=true" alt="GitHub Streak" height="180px" />
+      <td align="center" style="padding-top: 5px;">
+        <img src="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true&rank_icon=github" alt="Stats" height="150px" />
+      </td>
+      <td align="center" style="padding-top: 5px;">
+        <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true" alt="Langs" height="150px" />
+      </td>
+    </tr>
+    <tr>
+      <td align="center" colspan="2" style="padding-top: 5px;">
+        <img src="https://streak-stats.demolab.com/?user=dummJo&theme=vue-dark&background=0d1117&title=C9A84C&text=9a8660&sideLabels=9a8660&sideNums=C9A84C&stroke=1a1508&ring=C9A84C&fire=C9A84C&currStreakLabel=C9A84C&currStreakNum=C9A84C&hide_border=true" alt="Streak" height="150px" />
       </td>
     </tr>
   </table>
 </div>
 
-<div align="right">
-  <img src="https://komarev.com/ghpvc/?username=dummJo&color=C9A84C&style=flat-square&label=PROFILE+VIEWS" alt="Visitor Counter" />
-</div>
 
-<br/>
-
----
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=💠%20Core%20Subsystems%20/%20Tech%20Stack&fontSize=20&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=30&text=💠%20Systems%20&%20Expertise&fontSize=16&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
 <div align="center">
   <img src="https://skillicons.dev/icons?i=ts,nodejs,nextjs,docker,linux,py,cpp,bash,git,github,vscode,postgres,mongodb,redis,nginx,aws&theme=dark" alt="Tech Stack" />
 </div>
 
-<br/>
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=⚙️%20Industrial%20Protocols%20&%20Expertise&fontSize=20&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
 <div align="left">
 
 | Domain | Systems & Expertise |
 | :--- | :--- |
-| **Motion Control** | `ABB ACS580` `ACS880` `ACQ580` `Variable Speed Drives` |
-| **Automation** | `Crane N5050` `Anti-Sway` `Safe Torque Off` `Load Weighing` |
-| **Energy Layer** | `Power Quality` `THD Analysis` `Active Harmonic Filters` |
-| **Expert Logic** | `PLC Programming` `ABB` `Siemens` `Schneider Electric` |
-| **IIoT Interface** | `SCADA` `Remote Monitoring` `IEC Safety Protocols` |
+| **Motion** | `ABB ACS580` `ACS880` `ACQ580` `VSD` |
+| **Automation** | `Crane N5050` `Anti-Sway` `Safe Torque Off` |
+| **Energy** | `Power Quality` `Harmonic Filters` |
+| **Expertise** | `PLC` `ABB` `Siemens` `Schneider` |
 
 </div>
 
@@ -82,7 +66,7 @@
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=🏗️%20Selected%20Work%20&%20Milestones&fontSize=20&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=30&text=🏗️%20Work%20History&fontSize=16&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
 
 | Year | Project | Focus |
 | :----: | --------- | ------- |
@@ -96,7 +80,7 @@
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=40&text=📜%20Mission%20Logs%20/%20The%20Record&fontSize=20&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=30&text=📜%20Mission%20Logs&fontSize=16&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
 <div align="left">
 
 ```text
