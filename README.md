@@ -14,72 +14,78 @@
 
 ---
 
-I work at the intersection of **industrial engineering and applied software** — full project lifecycle from technical proposal through commissioning.
-
----
-
-<br/>
-
-### ⚙️ &nbsp;Industrial & Electrical
-
-```
-Variable Speed Drives    ·  ABB
-Crane Control            ·  Anti-Sway · Load Weighing · STO  (ACS880 + N5050)
-Power Quality            ·  THD Analysis · Active Harmonic Filters · Voltage Sag
-PLC Programming          ·  ABB · Siemens · Allen Bradley
-SCADA & IoT              ·  Remote Monitoring · DCS · IEC Functional Safety (SIL/STO)
-```
-
-<br/>
-
-### 🖥️ &nbsp;Software & Systems
-
+### 🕹️ &nbsp;Pac-Man Contribution Graph
 <div align="center">
-
-![TypeScript](https://img.shields.io/badge/TypeScript-0d1117?style=flat-square&logo=typescript&logoColor=C9A84C)
-![Node.js](https://img.shields.io/badge/Node.js-0d1117?style=flat-square&logo=node.js&logoColor=C9A84C)
-![Next.js](https://img.shields.io/badge/Next.js-0d1117?style=flat-square&logo=next.js&logoColor=C9A84C)
-![n8n](https://img.shields.io/badge/n8n-0d1117?style=flat-square&logo=n8n&logoColor=C9A84C)
-![Docker](https://img.shields.io/badge/Docker-0d1117?style=flat-square&logo=docker&logoColor=C9A84C)
-![Linux](https://img.shields.io/badge/Linux-0d1117?style=flat-square&logo=linux&logoColor=C9A84C)
-![AI/LLM](https://img.shields.io/badge/AI%20%2F%20LLM-0d1117?style=flat-square&logo=openai&logoColor=C9A84C)
-
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman.svg" alt="Pac-Man Graph" width="100%" />
 </div>
 
 <br/>
 
 ---
 
-### 🏗️ &nbsp;Selected Work
+### 📊 &nbsp;GitHub Analytics
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=dummJo&show_icons=true&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&border_color=1a1508&hide_border=false" alt="GitHub Stats" height="180px" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dummJo&layout=compact&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&border_color=1a1508&hide_border=false" alt="Top Languages" height="180px" />
+  <br/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=dummJo&theme=vue-dark&background=0d1117&title=C9A84C&text=9a8660&sideLabels=9a8660&sideNums=C9A84C&stroke=1a1508&ring=C9A84C&fire=C9A84C&currStreakLabel=C9A84C&currStreakNum=C9A84C&border=1a1508&hide_border=false" alt="GitHub Streak" height="180px" />
+</div>
 
-| Year | Project | Stack |
+<div align="right">
+  <img src="https://komarev.com/ghpvc/?username=dummJo&color=C9A84C&style=flat-square&label=PROFILE+VIEWS" alt="Visitor Counter" />
+</div>
+
+<br/>
+
+---
+
+### 🛠️ &nbsp;Tech Stack & Tools
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=ts,nodejs,nextjs,docker,linux,py,cpp,bash,git,github,vscode,postgres,mongodb,redis,nginx,aws&theme=dark" alt="Tech Stack" />
+</div>
+
+<br/>
+
+### ⚙️ &nbsp;Industrial & Electrical expertise
+```text
+Variable Speed Drives    ·  ABB (ACS580, ACS880)
+Crane Control            ·  Anti-Sway · Load Weighing · STO (N5050)
+Power Quality            ·  THD Analysis · Active Harmonic Filters
+PLC Programming          ·  ABB · Siemens · Allen Bradley
+SCADA & IoT              ·  Remote Monitoring · DCS · IEC Safety
+```
+
+<br/>
+
+---
+
+### 🏗️ &nbsp;Selected Work & Milestones
+
+| Year | Project | Focus |
 |:----:|---------|-------|
-| 2022– | **Crane Automation** — ABB ACS880 + N5050, Cilegon *(first in corridor)* | ABB · N5050 · STO · IEC Safety |
-| 2025 | **n8n Operations Automation** — PTTS internal workflow layer | n8n · Notion · LLM |
-| 2024– | **AI & Automation Tools** — LLM-integrated internal tooling | TypeScript · Docker |
-| ∞ | **Power Quality Remediation** — Multi-site manufacturing | Active Filters · THD |
-| 2023– | **ICSS Integration** — F&B, industrial, building automation | DCS · Profinet |
+| 2022– | **Crane Automation** — ABB ACS880 + N5050 | Cilegon Industrial Corridor |
+| 2025 | **n8n Operations Automation** | Internal Workflow Layer (LLM) |
+| 2024– | **AI & Automation Tools** | TypeScript · LLM Integration |
+| ∞ | **Power Quality Remediation** | Active Filters · THD Analysis |
+| 2023– | **ICSS Integration** | F&B · Industrial · DCS |
 
 <br/>
 
 ---
 
 ### 📜 &nbsp;The Record
-
-```
+```text
 2018  ·  Casio Manufacturing internship — Nakhon Ratchasima, Thailand
 2019  ·  Electrical field engineer — industrial sites across Java
 2020  ·  First solo VSD commissioning — ABB ACS580
-2022  ·  First ABB N5050 Crane deployment — Cilegon industrial corridor
-2024  ·  ABB Channel Partner Expert Day — Shanghai  (30+ countries)
+2022  ·  First ABB N5050 Crane deployment — Cilegon
+2024  ·  ABB Channel Partner Expert Day — Shanghai (30+ countries)
 2025  ·  Presales Engineer & System Integrator — PTTS
 ```
 
 <br/>
 
 ---
-
-<br/>
 
 <div align="center">
 
