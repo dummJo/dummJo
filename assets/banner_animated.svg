@@ -55,13 +55,13 @@
 
   <!-- Title -->
   <text x="600" y="138" text-anchor="middle" fill="#C9A84C"
-    font-family="Georgia,'Times New Roman',serif"
+    font-family="'Copernicus', Georgia, 'Times New Roman', serif"
     font-size="78" font-weight="bold" letter-spacing="5"
     filter="url(#title-glow)">ADAM MUHAMMAD</text>
 
   <!-- Subtitle -->
   <text x="600" y="190" text-anchor="middle" fill="#9a8660"
-    font-family="Georgia,'Times New Roman',serif"
+    font-family="'Copernicus', Georgia, 'Times New Roman', serif"
     font-size="22" letter-spacing="10">ENGINEER  ·  INTEGRATOR  ·  BUILDER</text>
 
   <!-- Subtle Corner Dots -->
