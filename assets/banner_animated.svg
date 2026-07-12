@@ -54,15 +54,15 @@
   <polygon points="1112,150 1120,142 1128,150 1120,158" fill="#C9A84C" opacity="0.5"/>
 
   <!-- Title -->
-  <text x="600" y="135" text-anchor="middle" fill="#C9A84C"
+  <text x="600" y="138" text-anchor="middle" fill="#C9A84C"
     font-family="Georgia,'Times New Roman',serif"
-    font-size="64" font-weight="bold" letter-spacing="4"
+    font-size="78" font-weight="bold" letter-spacing="5"
     filter="url(#title-glow)">ADAM MUHAMMAD</text>
 
   <!-- Subtitle -->
-  <text x="600" y="180" text-anchor="middle" fill="#9a8660"
+  <text x="600" y="190" text-anchor="middle" fill="#9a8660"
     font-family="Georgia,'Times New Roman',serif"
-    font-size="15" letter-spacing="8">ENGINEER  ·  INTEGRATOR  ·  BUILDER</text>
+    font-size="22" letter-spacing="10">ENGINEER  ·  INTEGRATOR  ·  BUILDER</text>
 
   <!-- Subtle Corner Dots -->
   <circle cx="40" cy="40" r="2" fill="#C9A84C" opacity="0.3"/>
