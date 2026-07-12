@@ -37,7 +37,7 @@
 
 <br/><br/>
 
-| 📈 GitHub Analytics | 🎛️ Language Breakdown |
+| GitHub Analytics | Language Breakdown |
 | :---: | :---: |
 | <img src="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true&rank_icon=github" alt="Stats" height="165px" /> | <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true" alt="Langs" height="165px" /> |
 
@@ -51,12 +51,12 @@
 
 <br/>
 
-| ⚡ Industrial Automation (OT) | 🌐 Software & IIoT Infrastructure (IT) |
+| Industrial Automation (OT) | Software & IIoT Infrastructure (IT) |
 | :--- | :--- |
-| 🔹 **ABB Drive Ecosystem**<br>Commissioning & tuning of `ACS880`, `ACS580`, `ACQ580` VSDs. | 🔹 **Software Engineering**<br>Development with `TypeScript`, `Node.js`, `Python`, `C++`, and `Bash`. |
-| 🔹 **Control Systems & DCS**<br>PLC integration across `ABB`, `Siemens`, and `Schneider` platforms. | 🔹 **IIoT & Cloud Infrastructure**<br>Deployment via `Docker`, custom `Linux` configurations, `AWS`, and `Nginx`. |
-| 🔹 **Crane & Heavy Automation**<br>Safe-state automation, `Crane N5050`, Anti-Sway, STO. | 🔹 **Database & Cache Systems**<br>Data orchestration with `PostgreSQL`, `MongoDB`, and `Redis`. |
-| 🔹 **Power Quality Engineering**<br>Harmonic remediation, Active Filters, and THD Analysis. | 🔹 **Operations & AI Orchestration**<br>Flow automation with `n8n` and custom LLM / AI integrations. |
+| **ABB Drive Ecosystem**<br>Commissioning & tuning of `ACS880`, `ACS580`, `ACQ580` VSDs. | **Software Engineering**<br>Development with `TypeScript`, `Node.js`, `Python`, `C++`, and `Bash`. |
+| **Control Systems & DCS**<br>PLC integration across `ABB`, `Siemens`, and `Schneider` platforms. | **IIoT & Cloud Infrastructure**<br>Deployment via `Docker`, custom `Linux` configurations, `AWS`, and `Nginx`. |
+| **Crane & Heavy Automation**<br>Safe-state automation, `Crane N5050`, Anti-Sway, STO. | **Database & Cache Systems**<br>Data orchestration with `PostgreSQL`, `MongoDB`, and `Redis`. |
+| **Power Quality Engineering**<br>Harmonic remediation, Active Filters, and THD Analysis. | **Operations & Workflow Automation**<br>Flow orchestration with `n8n` and custom system integrations. |
 
 <br/>
 
