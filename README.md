@@ -6,15 +6,11 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=400&size=18&duration=3000&pause=1000&color=C9A84C&center=true&vCenter=true&width=600&lines=Senior+Systems+Integrator;Industrial+Automation+Specialist;ABB+Drive+%26+Control+Expert;IIoT+%26+OT--IT+Architect;Mission+Critical+Systems+Engineer" alt="Typing SVG" />
 </p>
 
-<div align="center">
-  
 [![Role](https://img.shields.io/badge/Role-Senior_Systems_Integrator-C9A84C?style=flat-square&labelColor=0d1117)](https://github.com/dummJo)&nbsp;
 [![Focus](https://img.shields.io/badge/Focus-OT_/_IT_Convergence-C9A84C?style=flat-square&labelColor=0d1117)](https://github.com/dummJo)&nbsp;
 [![Status](https://img.shields.io/badge/Status-Available_Worldwide-C9A84C?style=flat-square&labelColor=0d1117)](https://github.com/dummJo)
 
-</div>
-
-<br/>
+<br/><br/>
 
 [![Website](https://img.shields.io/badge/dummjo.dev-0d1117?style=flat-square&logo=vercel&logoColor=C9A84C)](https://dummjo.dev)&nbsp;
 [![Email](https://img.shields.io/badge/contact-0d1117?style=flat-square&logo=gmail&logoColor=C9A84C)](mailto:1437yb@gmail.com)&nbsp;
@@ -32,18 +28,20 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg">
-  <img src="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg" alt="Pac-Man" width="100%" />
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg" alt="Pac-Man" width="850px" />
 </picture>
 
 <br/><br/>
 
-| GitHub Analytics | Language Breakdown |
-| :---: | :---: |
-| <img src="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true&rank_icon=github" alt="Stats" height="165px" /> | <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true" alt="Langs" height="165px" /> |
+<p align="center">
+  <img src="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true&rank_icon=github" alt="Stats" height="175px" />
+  &nbsp;&nbsp;
+  <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&theme=vue-dark&bg_color=0d1117&title_color=C9A84C&text_color=9a8660&icon_color=C9A84C&hide_border=true" alt="Langs" height="175px" />
+</p>
 
-<br/>
-
-<img src="https://streak-stats.demolab.com/?user=dummJo&theme=vue-dark&background=0d1117&title=C9A84C&text=9a8660&sideLabels=9a8660&sideNums=C9A84C&stroke=1a1508&ring=C9A84C&fire=C9A84C&currStreakLabel=C9A84C&currStreakNum=C9A84C&hide_border=true" alt="Streak" width="100%" />
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=dummJo&theme=vue-dark&background=0d1117&title=C9A84C&text=9a8660&sideLabels=9a8660&sideNums=C9A84C&stroke=1a1508&ring=C9A84C&fire=C9A84C&currStreakLabel=C9A84C&currStreakNum=C9A84C&hide_border=true" alt="Streak" height="175px" />
+</p>
 
 </div>
 
