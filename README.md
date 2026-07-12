@@ -25,7 +25,7 @@
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=30&text=📊%20System%20Telemetry%20%26%20Metrics&fontSize=16&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
+<img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-telemetry.svg" width="100%" alt="System Telemetry & Metrics"/>
 
 <div align="center">
   
@@ -47,8 +47,7 @@
 
 </div>
 
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=30&text=💠%20OT%20-%20IT%20Convergence%20Matrix&fontSize=16&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
+<img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-convergence.svg" width="100%" alt="OT - IT Convergence Matrix"/>
 
 <br/>
 
@@ -69,7 +68,7 @@
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=30&text=🏗️%20Project%20Portfolio%20%26%20Work%20History&fontSize=16&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
+<img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-portfolio.svg" width="100%" alt="Project Portfolio & Work History"/>
 
 | Period | Project & Control Architecture | Industrial Scope & Impact |
 | :---: | :--- | :--- |
@@ -83,7 +82,7 @@
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=30&text=📜%20Mission%20Logs%20%26%20Milestones&fontSize=16&fontColor=C9A84C&fontAlignY=50&fontFamily=Inter" width="100%"/>
+<img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-milestones.svg" width="100%" alt="Mission Logs & Milestones"/>
 <div align="left">
 
 ```text
@@ -105,13 +104,13 @@ SYSTEM LOG // CAREER MILESTONES INITIALIZED:
 
 <div align="center">
 
-![](https://img.shields.io/badge/Experience-7%2B_Years_in_Field-C9A84C?style=flat-square&labelColor=0d1117)&nbsp;
-![](https://img.shields.io/badge/Projects-50%2B_Successfully_Completed-C9A84C?style=flat-square&labelColor=0d1117)&nbsp;
-![](https://img.shields.io/badge/Location-Jakarta_%26_Bali-C9A84C?style=flat-square&labelColor=0d1117)&nbsp;
-![](https://img.shields.io/badge/Mobility-Available_Worldwide-C9A84C?style=flat-square&labelColor=0d1117)
+![Experience](https://img.shields.io/badge/Experience-7%2B_Years_in_Field-C9A84C?style=flat-square&labelColor=0d1117)&nbsp;
+![Projects](https://img.shields.io/badge/Projects-50%2B_Successfully_Completed-C9A84C?style=flat-square&labelColor=0d1117)&nbsp;
+![Location](https://img.shields.io/badge/Location-Jakarta_%26_Bali-C9A84C?style=flat-square&labelColor=0d1117)&nbsp;
+![Mobility](https://img.shields.io/badge/Mobility-Available_Worldwide-C9A84C?style=flat-square&labelColor=0d1117)
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0,0f0e0b,50,090807,100,0f0e0b&height=100&section=footer" width="100%"/>
+<img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/footer-wave.svg" width="100%" alt="Footer"/>
 
 </div>
