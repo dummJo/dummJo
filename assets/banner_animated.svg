@@ -1,67 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300">
   <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-      
-      @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-10px); }
-      }
-      @keyframes glow {
-        0%, 100% { filter: drop-shadow(0 0 5px #C9A84C44); }
-        50% { filter: drop-shadow(0 0 15px #C9A84C88); }
-      }
-      @keyframes scanline {
-        0% { transform: translateY(-300px); }
-        100% { transform: translateY(300px); }
-      }
-      @keyframes dash {
-        to { stroke-dashoffset: 0; }
-      }
-      
-      .base-font { font-family: 'Inter', sans-serif; }
-      .floating { animation: float 6s ease-in-out infinite; }
-      .glowing { animation: glow 4s ease-in-out infinite; }
-      .draw { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: dash 2s ease-out forwards; }
-      .scanline { animation: scanline 8s linear infinite; opacity: 0.1; }
-    </style>
-    
     <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0d1117"/>
       <stop offset="100%" stop-color="#05070a"/>
     </linearGradient>
-    
-    <filter id="blur">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+
+    <linearGradient id="gold-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C9A84C" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#C9A84C" stop-opacity="0.4"/>
+      <stop offset="60%" stop-color="#C9A84C" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#C9A84C" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="50%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.5"/>
+    </radialGradient>
+
+    <filter id="title-glow" x="-20%" y="-80%" width="140%" height="260%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur"/>
+      <feFlood flood-color="#C9A84C" flood-opacity="0.35" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a1f26" stroke-width="0.5"/>
+    </pattern>
   </defs>
 
   <!-- Background -->
   <rect width="1200" height="300" fill="url(#bg-grad)"/>
-  
+
   <!-- Grid Pattern -->
-  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnWrite">
-    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a1f26" stroke-width="0.5"/>
-  </pattern>
   <rect width="1200" height="300" fill="url(#grid)"/>
 
-  <!-- Scanline Effect -->
-  <rect width="1200" height="5" fill="#C9A84C" class="scanline"/>
+  <!-- Vignette -->
+  <rect width="1200" height="300" fill="url(#vignette)"/>
 
-  <!-- Center Content -->
-  <g class="floating">
-    <!-- Animated Lines -->
-    <path d="M 100 150 L 350 150" stroke="#C9A84C" stroke-width="1" opacity="0.3" class="draw"/>
-    <path d="M 850 150 L 1100 150" stroke="#C9A84C" stroke-width="1" opacity="0.3" class="draw"/>
-    
-    <!-- Title -->
-    <text x="600" y="140" text-anchor="middle" fill="#C9A84C" class="base-font glowing" font-size="72" font-weight="700" letter-spacing="4">ADAM MUHAMMAD</text>
-    
-    <!-- Subtitle -->
-    <text x="600" y="185" text-anchor="middle" fill="#9a8660" class="base-font" font-size="18" font-weight="400" letter-spacing="8">ENGINEER  ·  INTEGRATOR  ·  BUILDER</text>
-  </g>
+  <!-- Top & Bottom Accent Lines -->
+  <rect x="0" y="0" width="1200" height="1" fill="url(#gold-line)" opacity="0.6"/>
+  <rect x="0" y="299" width="1200" height="1" fill="url(#gold-line)" opacity="0.6"/>
 
-  <!-- Decorative Accents -->
-  <circle cx="100" cy="150" r="3" fill="#C9A84C" opacity="0.6"/>
-  <circle cx="1100" cy="150" r="3" fill="#C9A84C" opacity="0.6"/>
+  <!-- Decorative Side Lines -->
+  <line x1="80" y1="150" x2="370" y2="150" stroke="#C9A84C" stroke-width="0.6" opacity="0.3"/>
+  <line x1="830" y1="150" x2="1120" y2="150" stroke="#C9A84C" stroke-width="0.6" opacity="0.3"/>
+
+  <!-- Diamond Accents -->
+  <polygon points="72,150 80,142 88,150 80,158" fill="#C9A84C" opacity="0.5"/>
+  <polygon points="1112,150 1120,142 1128,150 1120,158" fill="#C9A84C" opacity="0.5"/>
+
+  <!-- Title -->
+  <text x="600" y="135" text-anchor="middle" fill="#C9A84C"
+    font-family="Georgia,'Times New Roman',serif"
+    font-size="64" font-weight="bold" letter-spacing="4"
+    filter="url(#title-glow)">ADAM MUHAMMAD</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="180" text-anchor="middle" fill="#9a8660"
+    font-family="Georgia,'Times New Roman',serif"
+    font-size="15" letter-spacing="8">ENGINEER  ·  INTEGRATOR  ·  BUILDER</text>
+
+  <!-- Subtle Corner Dots -->
+  <circle cx="40" cy="40" r="2" fill="#C9A84C" opacity="0.3"/>
+  <circle cx="1160" cy="40" r="2" fill="#C9A84C" opacity="0.3"/>
+  <circle cx="40" cy="260" r="2" fill="#C9A84C" opacity="0.3"/>
+  <circle cx="1160" cy="260" r="2" fill="#C9A84C" opacity="0.3"/>
 </svg>
