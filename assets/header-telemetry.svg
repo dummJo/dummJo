@@ -1,23 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 48" width="1200" height="48">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 62" width="1200" height="62">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0d1117"/>
-      <stop offset="50%" stop-color="#111009"/>
-      <stop offset="100%" stop-color="#0d1117"/>
+    <linearGradient id="hbg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#07050d"/>
+      <stop offset="50%" stop-color="#150c26"/>
+      <stop offset="100%" stop-color="#07050d"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="hrule" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#C9A84C" stop-opacity="0"/>
-      <stop offset="30%" stop-color="#C9A84C" stop-opacity="0.25"/>
-      <stop offset="70%" stop-color="#C9A84C" stop-opacity="0.25"/>
+      <stop offset="32%" stop-color="#a855f7" stop-opacity="0.40"/>
+      <stop offset="50%" stop-color="#C9A84C" stop-opacity="0.60"/>
+      <stop offset="68%" stop-color="#a855f7" stop-opacity="0.40"/>
       <stop offset="100%" stop-color="#C9A84C" stop-opacity="0"/>
     </linearGradient>
+    <linearGradient id="wingL" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="wingR" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="hglow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="1200" height="48" fill="url(#bg)"/>
-  <rect x="0" y="47" width="1200" height="1" fill="url(#accent)"/>
-  <rect x="0" y="0" width="1200" height="1" fill="url(#accent)" opacity="0.4"/>
-  <text x="600" y="31" text-anchor="middle" fill="#C9A84C"
-    font-family="'Copernicus', Georgia, 'Times New Roman', serif"
-    font-size="20" letter-spacing="1">
-    System Telemetry &amp; Metrics
-  </text>
+
+  <rect width="1200" height="62" fill="url(#hbg)"/>
+  <rect x="0" y="0"  width="1200" height="1" fill="url(#hrule)" opacity="0.5"/>
+  <rect x="0" y="61" width="1200" height="1" fill="url(#hrule)"/>
+
+  <!-- connecting hairlines -->
+  <line x1="70"  y1="31" x2="272" y2="31" stroke="url(#wingL)" stroke-width="0.7"/>
+  <line x1="928" y1="31" x2="1130" y2="31" stroke="url(#wingR)" stroke-width="0.7"/>
+
+  <!-- rotating rune sigils -->
+  <g transform="translate(300,31)" filter="url(#hglow)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+        from="0" to="-360" dur="46s" repeatCount="indefinite"/>
+      <polygon points="0,-13 13,0 0,13 -13,0" fill="none" stroke="#a855f7" stroke-width="0.9" opacity="0.75"/>
+      <polygon points="0,-8 8,0 0,8 -8,0" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.7" transform="rotate(45)"/>
+    </g>
+    <circle r="2" fill="#c77dff">
+      <animate attributeName="opacity" values="1;0.3;1" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <g transform="translate(900,31)" filter="url(#hglow)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+        from="0" to="360" dur="46s" repeatCount="indefinite"/>
+      <polygon points="0,-13 13,0 0,13 -13,0" fill="none" stroke="#a855f7" stroke-width="0.9" opacity="0.75"/>
+      <polygon points="0,-8 8,0 0,8 -8,0" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.7" transform="rotate(45)"/>
+    </g>
+    <circle r="2" fill="#c77dff">
+      <animate attributeName="opacity" values="1;0.3;1" dur="4s" repeatCount="indefinite" begin="2s"/>
+    </circle>
+  </g>
+
+  <!-- chapter mark -->
+  <text x="34" y="36" fill="#6d5a94"
+    font-family="'SFMono-Regular', Consolas, monospace"
+    font-size="12" letter-spacing="2">I</text>
+  <text x="1166" y="36" text-anchor="end" fill="#6d5a94"
+    font-family="'SFMono-Regular', Consolas, monospace"
+    font-size="12" letter-spacing="2">I</text>
+
+  <!-- kicker + title -->
+  <text x="600" y="22" text-anchor="middle" fill="#8b74bd"
+    font-family="'SFMono-Regular', Consolas, monospace"
+    font-size="8.5" letter-spacing="4.5">SCRYING MIRROR</text>
+  <text x="600" y="46" text-anchor="middle" fill="#C9A84C"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="21" letter-spacing="1.5">Telemetry &amp; Activity</text>
 </svg>

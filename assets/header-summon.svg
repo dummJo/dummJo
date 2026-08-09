@@ -61,16 +61,16 @@
   <!-- chapter mark -->
   <text x="34" y="36" fill="#6d5a94"
     font-family="'SFMono-Regular', Consolas, monospace"
-    font-size="12" letter-spacing="2">IV</text>
+    font-size="12" letter-spacing="2">V</text>
   <text x="1166" y="36" text-anchor="end" fill="#6d5a94"
     font-family="'SFMono-Regular', Consolas, monospace"
-    font-size="12" letter-spacing="2">IV</text>
+    font-size="12" letter-spacing="2">V</text>
 
   <!-- kicker + title -->
   <text x="600" y="22" text-anchor="middle" fill="#8b74bd"
     font-family="'SFMono-Regular', Consolas, monospace"
-    font-size="8.5" letter-spacing="4.5">CHRONICLE</text>
+    font-size="8.5" letter-spacing="4.5">CONTACT SIGIL</text>
   <text x="600" y="46" text-anchor="middle" fill="#C9A84C"
     font-family="Georgia, 'Times New Roman', serif"
-    font-size="21" letter-spacing="1.5">Mission Log</text>
+    font-size="21" letter-spacing="1.5">Summoning Circle</text>
 </svg>
