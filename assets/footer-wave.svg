@@ -1,13 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" width="1200" height="100" preserveAspectRatio="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 170" width="1200" height="170">
   <defs>
-    <linearGradient id="wave-bg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0f0e0b"/>
-      <stop offset="50%" stop-color="#090807"/>
-      <stop offset="100%" stop-color="#0f0e0b"/>
+    <linearGradient id="fbg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#07050d" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#0d0718" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#120a20"/>
     </linearGradient>
+    <radialGradient id="fglow" cx="50%" cy="100%" r="60%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.35"/>
+      <stop offset="55%" stop-color="#5b21b6" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="frule" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C9A84C" stop-opacity="0"/>
+      <stop offset="32%" stop-color="#a855f7" stop-opacity="0.40"/>
+      <stop offset="50%" stop-color="#C9A84C" stop-opacity="0.60"/>
+      <stop offset="68%" stop-color="#a855f7" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#C9A84C" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="mist" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b1d6b" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0a0614" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="runeFade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c77dff" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.25"/>
+    </linearGradient>
+    <filter id="fsoft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="frame"><rect width="1200" height="170"/></clipPath>
   </defs>
-  <path d="M0,40 C120,80 240,90 360,70 C480,50 600,10 720,30 C840,50 960,80 1080,60 C1140,50 1170,45 1200,40 L1200,100 L0,100 Z"
-    fill="url(#wave-bg)"/>
-  <path d="M0,45 C120,85 240,95 360,75 C480,55 600,15 720,35 C840,55 960,85 1080,65 C1140,55 1170,50 1200,45"
-    fill="none" stroke="#C9A84C" stroke-width="0.5" opacity="0.2"/>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="170" fill="url(#fbg)"/>
+    <rect width="1200" height="170" fill="url(#fglow)"/>
+    <rect x="0" y="0" width="1200" height="1" fill="url(#frule)"/>
+
+    <!-- closing circle rising from the base -->
+    <g transform="translate(600,188)" opacity="0.8">
+      <g>
+        <animateTransform attributeName="transform" type="rotate"
+          from="0" to="-360" dur="150s" repeatCount="indefinite"/>
+        <circle r="152" fill="none" stroke="#7c3aed" stroke-width="0.7" opacity="0.5"/>
+        <circle r="146" fill="none" stroke="#c77dff" stroke-width="4.5"
+                stroke-dasharray="1.5 15" opacity="0.4"/>
+        <circle r="118" fill="none" stroke="#5b21b6" stroke-width="0.6" opacity="0.45"/>
+        <g fill="none" stroke="url(#runeFade)" stroke-width="1.3"
+           stroke-linecap="round" stroke-linejoin="round" filter="url(#fsoft)">
+          <g transform="rotate(200) translate(0,-132)"><path d="M-5,-8 L-5,8 M-5,-8 L5,-2 L-5,4"/></g>
+          <g transform="rotate(228) translate(0,-132)"><path d="M-5,-8 L5,8 M5,-8 L-5,8"/></g>
+          <g transform="rotate(256) translate(0,-132)"><path d="M0,-8 L0,8 M-5,-4 L5,-4"/></g>
+          <g transform="rotate(284) translate(0,-132)"><path d="M-5,0 L0,-8 L5,0 L0,8 Z"/></g>
+          <g transform="rotate(312) translate(0,-132)"><path d="M-5,8 L0,-8 L5,8"/></g>
+          <g transform="rotate(340) translate(0,-132)"><path d="M0,-8 L0,8 M0,-2 L6,-8 M0,-2 L-6,-8"/></g>
+        </g>
+      </g>
+      <g opacity="0.65">
+        <animateTransform attributeName="transform" type="rotate"
+          from="360" to="0" dur="95s" repeatCount="indefinite"/>
+        <polygon points="0,-100 100,0 0,100 -100,0" fill="none" stroke="#C9A84C" stroke-width="0.6" opacity="0.45"/>
+        <polygon points="0,-100 100,0 0,100 -100,0" fill="none" stroke="#a855f7" stroke-width="0.6" opacity="0.45" transform="rotate(45)"/>
+      </g>
+    </g>
+
+    <!-- descending embers -->
+    <g fill="#c77dff">
+      <circle cx="250" cy="0" r="1.4" opacity="0"><animate attributeName="cy" values="20;150" dur="12s" repeatCount="indefinite" begin="0s"/><animate attributeName="opacity" values="0;0.7;0" dur="12s" repeatCount="indefinite" begin="0s"/></circle>
+      <circle cx="470" cy="0" r="1.1" opacity="0"><animate attributeName="cy" values="10;155" dur="15s" repeatCount="indefinite" begin="3.5s"/><animate attributeName="opacity" values="0;0.6;0" dur="15s" repeatCount="indefinite" begin="3.5s"/></circle>
+      <circle cx="730" cy="0" r="1.5" opacity="0"><animate attributeName="cy" values="15;148" dur="13s" repeatCount="indefinite" begin="6s"/><animate attributeName="opacity" values="0;0.65;0" dur="13s" repeatCount="indefinite" begin="6s"/></circle>
+      <circle cx="955" cy="0" r="1.2" opacity="0"><animate attributeName="cy" values="25;152" dur="16s" repeatCount="indefinite" begin="1.8s"/><animate attributeName="opacity" values="0;0.55;0" dur="16s" repeatCount="indefinite" begin="1.8s"/></circle>
+    </g>
+
+    <!-- mist band over the base -->
+    <path d="M0,96 C130,132 250,142 370,120 C490,98 610,62 730,84 C850,106 970,134 1090,112 C1140,102 1170,96 1200,92 L1200,170 L0,170 Z"
+          fill="url(#mist)"/>
+    <path d="M0,100 C130,136 250,146 370,124 C490,102 610,66 730,88 C850,110 970,138 1090,116 C1140,106 1170,100 1200,96"
+          fill="none" stroke="#a855f7" stroke-width="0.6" opacity="0.35"/>
+    <path d="M0,108 C130,144 250,154 370,132 C490,110 610,74 730,96 C850,118 970,146 1090,124 C1140,114 1170,108 1200,104"
+          fill="none" stroke="#C9A84C" stroke-width="0.5" opacity="0.18"/>
+
+    <!-- sign-off -->
+    <text x="600" y="152" text-anchor="middle" fill="#6d5a94"
+      font-family="'SFMono-Regular', Consolas, monospace"
+      font-size="9.5" letter-spacing="5">PRECISION · CONTROL · CRAFT</text>
+  </g>
 </svg>
