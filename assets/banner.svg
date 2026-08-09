@@ -109,18 +109,18 @@
   </g>
 
   <text x="600" y="163" text-anchor="middle" fill="url(#gilded)"
-    font-family="Georgia, 'Times New Roman', serif"
-    font-size="76" font-weight="bold" letter-spacing="6"
+    font-family="'Aptos Display', Aptos, 'Segoe UI Variable Display', 'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif"
+    font-size="72" font-weight="600" letter-spacing="8"
     filter="url(#aura)">ADAM MUHAMMAD</text>
 
   <line x1="420" y1="188" x2="780" y2="188" stroke="#a855f7" stroke-width="0.7" opacity="0.5"/>
   <polygon points="600,182 606,188 600,194 594,188" fill="#C9A84C" opacity="0.8"/>
 
   <text x="600" y="219" text-anchor="middle" fill="#b9a1e8"
-    font-family="Georgia, 'Times New Roman', serif"
-    font-size="19" letter-spacing="9">ENGINEER  ·  INTEGRATOR  ·  BUILDER</text>
+    font-family="Aptos, 'Segoe UI Variable Text', 'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif"
+    font-size="18" font-weight="500" letter-spacing="9">ENGINEER  ·  INTEGRATOR  ·  BUILDER</text>
 
   <text x="600" y="252" text-anchor="middle" fill="#7c6a9c"
-    font-family="'SFMono-Regular', Consolas, monospace"
+    font-family="'Aptos Mono', 'Cascadia Mono', Consolas, 'SFMono-Regular', ui-monospace, monospace"
     font-size="11" letter-spacing="5">OT — IT CONVERGENCE</text>
 </svg>

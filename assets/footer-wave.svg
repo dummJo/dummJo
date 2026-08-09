@@ -82,7 +82,7 @@
 
     <!-- sign-off -->
     <text x="600" y="152" text-anchor="middle" fill="#6d5a94"
-      font-family="'SFMono-Regular', Consolas, monospace"
+      font-family="'Aptos Mono', 'Cascadia Mono', Consolas, 'SFMono-Regular', ui-monospace, monospace"
       font-size="9.5" letter-spacing="5">PRECISION · CONTROL · CRAFT</text>
   </g>
 </svg>
