@@ -1,77 +1,85 @@
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/banner_animated.svg" width="100%" alt="Adam Muhammad"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/banner-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/banner-light.svg">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/banner-dark.svg" width="100%" alt="Adam Muhammad. Engineer, integrator, builder. A harmonic-rich waveform settling into a clean 50 Hz sine past an active filter.">
+</picture>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=400&size=18&duration=3000&pause=1000&color=C77DFF&center=true&vCenter=true&width=620&lines=Senior+Systems+Integrator;Industrial+Automation+Specialist;ABB+Drive+%26+Control+Expert;IIoT+%26+OT--IT+Architect;Mission+Critical+Systems+Engineer" alt="Typing SVG" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=20&duration=3200&pause=1100&color=3DDC97&center=true&vCenter=true&width=640&lines=Senior+Systems+Integrator;Industrial+Automation+Specialist;ABB+Drive+%26+Control+Expert;IIoT+%26+OT--IT+Architect;Mission+Critical+Systems+Engineer">
+    <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=20&duration=3200&pause=1100&color=0B7D54&center=true&vCenter=true&width=640&lines=Senior+Systems+Integrator;Industrial+Automation+Specialist;ABB+Drive+%26+Control+Expert;IIoT+%26+OT--IT+Architect;Mission+Critical+Systems+Engineer">
+    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=20&duration=3200&pause=1100&color=3DDC97&center=true&vCenter=true&width=640&lines=Senior+Systems+Integrator;Industrial+Automation+Specialist;ABB+Drive+%26+Control+Expert;IIoT+%26+OT--IT+Architect;Mission+Critical+Systems+Engineer" alt="Senior Systems Integrator, Industrial Automation Specialist, ABB Drive and Control Expert, IIoT and OT/IT Architect, Mission Critical Systems Engineer" height="34">
+  </picture>
 </p>
 
-[![Role](https://img.shields.io/badge/Role-Senior_Systems_Integrator-C9A84C?style=flat-square&labelColor=140a24)](https://github.com/dummJo)&nbsp;
-[![Focus](https://img.shields.io/badge/Focus-OT_/_IT_Convergence-A855F7?style=flat-square&labelColor=140a24)](https://github.com/dummJo)&nbsp;
-[![Status](https://img.shields.io/badge/Status-Available_Worldwide-C9A84C?style=flat-square&labelColor=140a24)](https://github.com/dummJo)
+Presales engineer and systems integrator at **PTTS**, an ABB Authorized Value Provider with offices in Jakarta and Bali. I commission ABB drives, integrate PLC and DCS platforms, and write the software that connects field devices to modern stacks.
 
-<br/><br/>
+*Precision in power. Clarity in control.*
 
-[![Website](https://img.shields.io/badge/dummjo.dev-140a24?style=flat-square&logo=vercel&logoColor=C77DFF)](https://dummjo.dev)&nbsp;
-[![Email](https://img.shields.io/badge/contact-140a24?style=flat-square&logo=gmail&logoColor=C77DFF)](mailto:1437yb@gmail.com)&nbsp;
-[![GitHub](https://img.shields.io/badge/dummJo-140a24?style=flat-square&logo=github&logoColor=C77DFF)](https://github.com/dummJo)&nbsp;
-<img src="https://komarev.com/ghpvc/?username=dummJo&color=A855F7&style=flat-square&label=VIEWS" alt="Views" valign="middle" />
+<p>
+  <a href="mailto:1437yb@gmail.com?subject=Project%20brief"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-light.svg"><img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-dark.svg" height="44" alt="Email a project brief"></picture></a>&nbsp;
+  <a href="https://dummjo.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-site-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-site-light.svg"><img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-site-dark.svg" height="44" alt="dummjo.dev"></picture></a>&nbsp;
+  <img src="https://komarev.com/ghpvc/?username=dummJo&color=0b7d54&style=flat&label=profile+views" alt="Profile views" valign="middle">
+</p>
 
-<br/><br/>
+<br/>
 
-> *Precision in power. Clarity in control.*<br/>
-> *Every commissioned system is a circle drawn correctly the first time.*
-
-</div>
-
----
-
-<img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-telemetry.svg" width="100%" alt="Telemetry and Activity"/>
-
-<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-activity-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-activity-light.svg">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-activity-dark.svg" width="100%" alt="01 Activity">
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg">
-  <img src="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg" alt="Contribution graph" width="850px" />
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg" alt="Contribution graph" width="100%">
 </picture>
 
-<br/><br/>
-
 <p align="center">
-  <img src="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&theme=transparent&bg_color=0d0718&title_color=C9A84C&text_color=b9a1e8&icon_color=A855F7&border_color=3b1d6b&rank_icon=github" alt="Stats" height="175px" />
-  &nbsp;&nbsp;
-  <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&theme=transparent&bg_color=0d0718&title_color=C9A84C&text_color=b9a1e8&icon_color=A855F7&border_color=3b1d6b" alt="Languages" height="175px" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&rank_icon=github&bg_color=10171e&title_color=3ddc97&text_color=9aabb4&icon_color=3ddc97&border_color=1d2832&border_radius=12">
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&rank_icon=github&bg_color=f5f8f6&title_color=0b7d54&text_color=4c5b63&icon_color=109a68&border_color=dfe7e3&border_radius=12">
+    <img src="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&rank_icon=github&bg_color=10171e&title_color=3ddc97&text_color=9aabb4&icon_color=3ddc97&border_color=1d2832&border_radius=12" alt="GitHub stats" height="170">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&bg_color=10171e&title_color=3ddc97&text_color=9aabb4&border_color=1d2832&border_radius=12">
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&bg_color=f5f8f6&title_color=0b7d54&text_color=4c5b63&border_color=dfe7e3&border_radius=12">
+    <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&bg_color=10171e&title_color=3ddc97&text_color=9aabb4&border_color=1d2832&border_radius=12" alt="Most used languages" height="170">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=dummJo&background=10171e&border=1d2832&border_radius=12&stroke=1d2832&ring=3ddc97&fire=f2b544&currStreakNum=eaf3ef&currStreakLabel=3ddc97&sideNums=eaf3ef&sideLabels=9aabb4&dates=9aabb4">
+    <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=dummJo&background=f5f8f6&border=dfe7e3&border_radius=12&stroke=dfe7e3&ring=109a68&fire=c27c06&currStreakNum=0f1a20&currStreakLabel=0b7d54&sideNums=0f1a20&sideLabels=4c5b63&dates=4c5b63">
+    <img src="https://streak-stats.demolab.com/?user=dummJo&background=10171e&border=1d2832&border_radius=12&stroke=1d2832&ring=3ddc97&fire=f2b544&currStreakNum=eaf3ef&currStreakLabel=3ddc97&sideNums=eaf3ef&sideLabels=9aabb4&dates=9aabb4" alt="Contribution streak" height="170">
+  </picture>
 </p>
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=dummJo&background=0d0718&border=3b1d6b&stroke=3b1d6b&ring=A855F7&fire=C77DFF&currStreakNum=C9A84C&currStreakLabel=C9A84C&sideNums=C9A84C&sideLabels=b9a1e8&dates=6d5a94" alt="Streak" height="175px" />
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-convergence-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-convergence-light.svg">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-convergence-dark.svg" width="100%" alt="02 OT / IT Convergence">
+</picture>
 
-</div>
-
-<img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-convergence.svg" width="100%" alt="OT - IT Convergence"/>
-
-<br/>
-
-| ◈ Industrial Automation (OT) | ◈ Software & IIoT Infrastructure (IT) |
+| Industrial Automation (OT) | Software & IIoT Infrastructure (IT) |
 | :--- | :--- |
 | **ABB Drive Ecosystem**<br>Commissioning & tuning of `ACS880`, `ACS580`, `ACQ580` VSDs. | **Software Engineering**<br>Development with `TypeScript`, `Node.js`, `Python`, `C++`, and `Bash`. |
 | **Control Systems & DCS**<br>PLC integration across `ABB`, `Siemens`, and `Schneider` platforms. | **IIoT & Cloud Infrastructure**<br>Deployment via `Docker`, custom `Linux` configurations, `AWS`, and `Nginx`. |
 | **Crane & Heavy Automation**<br>Safe-state automation, `Crane N5050`, Anti-Sway, STO. | **Database & Cache Systems**<br>Data orchestration with `PostgreSQL`, `MongoDB`, and `Redis`. |
 | **Power Quality Engineering**<br>Harmonic remediation, Active Filters, and THD Analysis. | **Operations & Workflow Automation**<br>Flow orchestration with `n8n` and custom system integrations. |
 
-<br/>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=ts,nodejs,nextjs,docker,linux,py,cpp,bash,git,github,postgres,mongodb,redis,nginx,aws&theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=ts,nodejs,nextjs,docker,linux,py,cpp,bash,git,github,postgres,mongodb,redis,nginx,aws&theme=light">
+    <img src="https://skillicons.dev/icons?i=ts,nodejs,nextjs,docker,linux,py,cpp,bash,git,github,postgres,mongodb,redis,nginx,aws&theme=dark" alt="TypeScript, Node.js, Next.js, Docker, Linux, Python, C++, Bash, Git, GitHub, PostgreSQL, MongoDB, Redis, Nginx, AWS" >
+  </picture>
+</p>
 
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=ts,nodejs,nextjs,docker,linux,py,cpp,bash,git,github,postgres,mongodb,redis,nginx,aws&theme=dark" alt="Technology stack" />
-</div>
-
-<br/>
-
----
-
-<img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-portfolio.svg" width="100%" alt="Portfolio and Deployments"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-field-record-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-field-record-light.svg">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-field-record-dark.svg" width="100%" alt="03 Field Record">
+</picture>
 
 | Period | Project & Control Architecture | Industrial Scope & Impact |
 | :---: | :--- | :--- |
@@ -81,52 +89,35 @@
 | **Ongoing** | **Power Quality Remediation**<br>Active Harmonic Filters | Power quality assessments, Total Harmonic Distortion (THD) mitigation, and engineering of clean energy grids. |
 | **2023 – Present** | **DCS / PLC System Integration**<br>`Siemens` · `Schneider` · `ABB AC800M` | Process engineering, network setups, and commissioning of control panels for Food & Beverage and manufacturing lines. |
 
-<br/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-timeline-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-timeline-light.svg">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-timeline-dark.svg" width="100%" alt="04 Timeline">
+</picture>
 
----
+| Year | Milestone |
+| :---: | :--- |
+| **2018** | **Casio Manufacturing**, production internship · Thailand |
+| **2019** | **PTTS**, electrical field engineer · commissioning |
+| **2020** | **ABB ACQ580**, first solo variable speed drive (VSD) deployment |
+| **2022** | **Crane automation deployment** · Cilegon · `ACS880` + `N5050` integration |
+| **2025** | **ABB Channel Partner Expert Day**, delegate · Shanghai, China |
+| **2025** | **PTTS**, presales engineer & system integrator · Jakarta / Bali |
 
-<img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-milestones.svg" width="100%" alt="Mission Log"/>
-<div align="left">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-contact-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-contact-light.svg">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-contact-dark.svg" width="100%" alt="05 Contact">
+</picture>
 
-```text
-◈ CHRONICLE // CAREER MILESTONES INITIALIZED
-───────────────────────────────────────────────────────────────────────────────
-[2018]  »  CASIO MANUFACTURING — PRODUCTION INTERNSHIP [THAILAND]
-[2019]  »  ELECTRICAL FIELD ENGINEER — PTTS [COMMISSIONING]
-[2020]  »  ABB ACQ580 — DEPLOYED FIRST SOLO VARIABLE SPEED DRIVE (VSD)
-[2022]  »  CRANE AUTOMATION DEPLOYMENT — CILEGON [ACS880 + N5050 INTEGRATION]
-[2025]  »  ABB CHANNEL PARTNER EXPERT DAY — DELEGATE [SHANGHAI, CHINA]
-[2025]  »  PRESALES ENGINEER & SYSTEM INTEGRATOR — PTTS [JAKARTA/BALI]
-───────────────────────────────────────────────────────────────────────────────
-```
+Commissioning, drive tuning, power quality, or an OT/IT bridge that has to hold? Send a short brief with the site, the equipment, and what has to work. More of the work lives at [dummjo.dev](https://dummjo.dev).
 
-</div>
+<a href="mailto:1437yb@gmail.com?subject=Project%20brief"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-light.svg"><img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-dark.svg" height="44" alt="Email a project brief"></picture></a>
 
-<br/>
+7+ years in the field · 50+ projects completed · Jakarta & Bali · available worldwide
 
----
-
-<img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-summon.svg" width="100%" alt="Contact"/>
-
-<div align="center">
-
-<br/>
-
-**Commissioning, drive tuning, power quality, or an OT/IT bridge that has to hold?**<br/>
-Draw the circle — I will answer.
-
-<br/>
-
-[![Website](https://img.shields.io/badge/dummjo.dev-140a24?style=for-the-badge&logo=vercel&logoColor=C77DFF)](https://dummjo.dev)&nbsp;
-[![Email](https://img.shields.io/badge/Send_a_Message-140a24?style=for-the-badge&logo=gmail&logoColor=C77DFF)](mailto:1437yb@gmail.com)
-
-<br/>
-
-![Experience](https://img.shields.io/badge/Experience-7%2B_Years_in_Field-C9A84C?style=flat-square&labelColor=140a24)&nbsp;
-![Projects](https://img.shields.io/badge/Projects-50%2B_Successfully_Completed-A855F7?style=flat-square&labelColor=140a24)&nbsp;
-![Location](https://img.shields.io/badge/Location-Jakarta_%26_Bali-C9A84C?style=flat-square&labelColor=140a24)&nbsp;
-![Mobility](https://img.shields.io/badge/Mobility-Available_Worldwide-A855F7?style=flat-square&labelColor=140a24)
-
-<img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/footer-wave.svg" width="100%" alt="Footer"/>
-
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/footer-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/footer-light.svg">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/footer-dark.svg" width="100%" alt="Three-phase supply, L1 L2 L3">
+</picture>
