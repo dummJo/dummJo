@@ -1,7 +1,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/banner-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/banner-light.svg">
-  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/banner-dark.svg" width="100%" alt="Adam Muhammad. Engineer, integrator, builder. A harmonic-rich waveform settling into a clean 50 Hz sine past an active filter.">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/banner-dark.svg" width="100%" alt="Adam Muhammad. Engineered to outrun. A harmonic-rich waveform settling into a clean 50 Hz sine past an active filter.">
 </picture>
 
 <p align="center">

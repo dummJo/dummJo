@@ -200,14 +200,14 @@ def banner(t):
 
 <text x="64" y="128" fill="{t["fg"]}" font-family="{SANS_DISPLAY}" font-size="76"
       font-weight="600" letter-spacing="-0.5">Adam Muhammad</text>
-<text x="64" y="184" fill="{t["muted"]}" font-family="{SANS}" font-size="30">Engineer · Integrator · Builder</text>
+<text x="64" y="184" fill="{t["muted"]}" font-family="{SANS}" font-size="30">Engineered to outrun.</text>
 
 <g font-family="{MONO}" font-size="17">
   <text x="{x0}" y="334" fill="{t["amber_text"]}">h5 · h7 · h11</text>
   <text x="{filter_x}" y="334" fill="{t["muted"]}" text-anchor="middle">active filter</text>
   <text x="{x1}" y="334" fill="{t["mint_text"]}" text-anchor="end">50 Hz fundamental</text>
 </g>'''
-    return svg(w, h, body, "Adam Muhammad, engineer, integrator, builder")
+    return svg(w, h, body, "Adam Muhammad. Engineered to outrun.")
 
 
 # ---------------------------------------------------------------- section glyphs
