@@ -272,12 +272,28 @@ def glyph_burst(t):
             f'stroke-linecap="round"/>')
 
 
-SECTIONS = [
-    ("activity",     "01", "Activity",            glyph_samples),
+def glyph_drive(t):
+    """Supply: the IEC symbol for a frequency converter (AC in, AC out), i.e. a VSD."""
+    cx, w, h = GX1 - 26, 44, 34
+    x0, y0, x1, y1 = cx - w / 2, GCY - h / 2, cx + w / 2, GCY + h / 2
+
+    def tilde(x, y):
+        pts = [(x + i, y - 3 * sin(2 * pi * i / 12)) for i in range(13)]
+        return f'<path d="{polyline(pts)}" fill="none" stroke="{t["mint"]}" stroke-width="2" stroke-linecap="round"/>'
+
+    return (f'<line x1="{x0 - 40}" y1="{GCY}" x2="{x0}" y2="{GCY}" stroke="{t["slate"]}" stroke-width="2"/>'
+            f'<line x1="{x1}" y1="{GCY}" x2="{GX1}" y2="{GCY}" stroke="{t["slate"]}" stroke-width="2"/>'
+            f'<rect x="{x0}" y="{y0}" width="{w}" height="{h}" rx="3" fill="none" stroke="{t["mint"]}" stroke-width="2"/>'
+            f'<line x1="{x0}" y1="{y1}" x2="{x1}" y2="{y0}" stroke="{t["mint"]}" stroke-width="1.6"/>'
+            + tilde(x0 + 5, y0 + 9) + tilde(x1 - 17, y1 - 9))
+
+
+SECTIONS = [    ("supply",       "01", "What PTTS Supplies",  glyph_drive),
     ("convergence",  "02", "OT / IT Convergence", glyph_converge),
     ("field-record", "03", "Field Record",        glyph_phasor),
     ("timeline",     "04", "Timeline",            glyph_clock),
-    ("contact",      "05", "Contact",             glyph_burst),
+    ("activity",     "05", "Tools and Activity",  glyph_samples),
+    ("contact",      "06", "Start a Project",     glyph_burst),
 ]
 
 
