@@ -1,374 +1,373 @@
 #!/usr/bin/env python3
-"""Build the Clean Signal SVG assets for the profile README.
+"""Build the Vincinian SVG assets for the profile README.
 
-Every asset ships in a dark and a light variant; the README swaps them
-with <picture> and prefers-color-scheme. Run from anywhere:
+The Hallmark Blueprint theme on its brownline sheet, read as a Leonardo
+notebook: parchment and sepia ink in light mode, a night sepia sheet in dark
+mode, the cheetah as a red-chalk (sanguine) study. The README swaps the two
+with <picture>. Type is Cormorant Garamond and IBM Plex Mono (both SIL OFL),
+subset to the glyphs each file uses and embedded, because an SVG served as an image cannot
+fetch a webfont and would otherwise fall back to whatever the viewer has.
 
-    python3 scripts/build_assets.py
+    python3 scripts/build_assets.py --fonts <dir with the .woff2 files>
 
-The palette is checked against WCAG AA before anything is written, and
-the build stops if a pair falls short.
+The woff2 files come from the @fontsource npm packages:
+cormorant-garamond-latin-{600-normal,500-normal,400-italic},
+ibm-plex-mono-latin-500-normal. The build stops if a text pair falls below
+WCAG AA (4.5:1) or a meaningful line below 3:1.
 """
 
-from math import cos, hypot, pi, radians, sin
+import argparse
+import base64
+import io
+from math import atan2, cbrt, cos, hypot, pi, radians, sin
 from pathlib import Path
+
+from fontTools import subset
+from fontTools.ttLib import TTFont
 
 ASSETS = Path(__file__).resolve().parent.parent / "assets"
 
-SANS_DISPLAY = ("'Aptos Display', Aptos, 'Segoe UI Variable Display', 'Segoe UI', "
-                "Inter, 'Helvetica Neue', Arial, sans-serif")
-SANS = ("Aptos, 'Segoe UI Variable Text', 'Segoe UI', Inter, 'Helvetica Neue', "
-        "Arial, sans-serif")
-MONO = ("'Aptos Mono', 'Cascadia Mono', Consolas, 'SFMono-Regular', "
-        "ui-monospace, monospace")
+FONT_FILES = {
+    "display": ("Cormorant Garamond", 600, "normal", "cormorant-garamond-latin-600-normal.woff2"),
+    "body": ("Cormorant Garamond", 400, "italic", "cormorant-garamond-latin-400-italic.woff2"),
+    "label": ("Cormorant Garamond", 500, "normal", "cormorant-garamond-latin-500-normal.woff2"),
+    "mono": ("IBM Plex Mono", 500, "normal", "ibm-plex-mono-latin-500-normal.woff2"),
+}
 
-# Two core hues (mint = clean fundamental, amber = harmonics) on neutral ink/paper.
-# *_text variants exist where the stroke tone is too light to carry small type.
-THEMES = {
-    "dark": dict(
-        page="#0d1117",          # GitHub dark canvas, for contrast checks only
-        card="#10171e", border="#1d2832",
-        fg="#eaf3ef", muted="#9aabb4",
-        mint="#3ddc97", mint_text="#3ddc97",
-        amber="#f2b544", amber_text="#f2b544",
-        slate="#6b7d88", trace="#f4fff9",
-        btn="#3ddc97", on_btn="#0c1419",
+
+# ---------------------------------------------------------------- colour
+
+def oklch(l, c, h):
+    """OKLCH (L in %, C, h in degrees) to an sRGB hex string."""
+    l /= 100
+    a, b = c * cos(radians(h)), c * sin(radians(h))
+    l_ = (l + 0.3963377774 * a + 0.2158037573 * b) ** 3
+    m_ = (l - 0.1055613458 * a - 0.0638541728 * b) ** 3
+    s_ = (l - 0.0894841775 * a - 1.2914855480 * b) ** 3
+    rgb = (4.0767416621 * l_ - 3.3077115913 * m_ + 0.2309699292 * s_,
+           -1.2684380046 * l_ + 2.6097574011 * m_ - 0.3413193965 * s_,
+           -0.0041960863 * l_ - 0.7034186147 * m_ + 1.7076147010 * s_)
+
+    def enc(x):
+        x = min(max(x, 0.0), 1.0)
+        x = 12.92 * x if x <= 0.0031308 else 1.055 * x ** (1 / 2.4) - 0.055
+        return round(x * 255)
+    return "#" + "".join(f"{enc(v):02x}" for v in rgb)
+
+
+# Light is the theme's brownline sheet (references/themes/blueprint.md); dark is
+# the same sheet at night, derived here: the ground and the ink swap ends of the
+# sepia scale, the red pencil lifts so it still reads on the dark ground.
+SHEETS = {
+    "dark": dict(            # night sepia
+        paper=oklch(24, 0.03, 60), paper3=oklch(20, 0.025, 60),
+        ink=oklch(90, 0.04, 80), ink2=oklch(84, 0.045, 78), muted=oklch(74, 0.04, 70),
+        chalk=oklch(66, 0.14, 35), rule_a=0.85, rule2_a=0.32, page="#0d1117",
     ),
-    "light": dict(
-        page="#ffffff",          # GitHub light canvas, for contrast checks only
-        card="#f5f8f6", border="#dfe7e3",
-        fg="#0f1a20", muted="#4c5b63",
-        mint="#109a68", mint_text="#0b7d54",
-        amber="#c27c06", amber_text="#8f5a00",
-        slate="#7a8a94", trace="#0f1a20",
-        btn="#0b7d54", on_btn="#ffffff",
+    "light": dict(           # brownline
+        paper=oklch(86, 0.045, 80), paper3=oklch(82, 0.045, 78),
+        ink=oklch(28, 0.05, 50), ink2=oklch(28, 0.05, 50), muted=oklch(45, 0.05, 55),
+        chalk=oklch(45, 0.19, 28), rule_a=0.85, rule2_a=0.32, page="#ffffff",
     ),
 }
 
 
-# ---------------------------------------------------------------- contrast
-
-def _luminance(hex_colour):
-    h = hex_colour.lstrip("#")
-    channels = (int(h[i:i + 2], 16) / 255 for i in (0, 2, 4))
-    lin = [c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4 for c in channels]
+def _lum(hex_):
+    ch = [int(hex_[i:i + 2], 16) / 255 for i in (1, 3, 5)]
+    lin = [c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4 for c in ch]
     return 0.2126 * lin[0] + 0.7152 * lin[1] + 0.0722 * lin[2]
 
 
 def contrast(a, b):
-    hi, lo = sorted((_luminance(a), _luminance(b)), reverse=True)
+    hi, lo = sorted((_lum(a), _lum(b)), reverse=True)
     return (hi + 0.05) / (lo + 0.05)
 
 
 def check_palette():
-    """Text needs 4.5:1 (WCAG 1.4.3); meaningful strokes need 3:1 (1.4.11)."""
-    rules = [
-        ("text", "card", ("fg", "muted", "mint_text", "amber_text"), 4.5),
-        ("text", "page", ("muted",), 4.5),               # footer legend
-        ("graphic", "card", ("mint", "amber", "slate"), 3.0),
-        ("graphic", "page", ("mint", "amber", "slate"), 3.0),  # footer waves
-        ("text", "btn", ("on_btn",), 4.5),                       # primary button label
-        ("text", "card", ("fg",), 4.5),                          # secondary button label
-    ]
-    failures = []
-    for name, t in THEMES.items():
-        for kind, bg, keys, need in rules:
-            for k in keys:
-                ratio = contrast(t[k], t[bg])
-                ok = ratio >= need
-                print(f"  {name:5} {kind:7} {k:10} on {bg:4}  {ratio:5.2f}:1  "
-                      f"(need {need})  {'ok' if ok else 'FAIL'}")
-                if not ok:
-                    failures.append(f"{name}.{k} on {bg}")
-    if failures:
-        raise SystemExit("contrast check failed: " + ", ".join(failures))
+    fails = []
+    for name, t in SHEETS.items():
+        pairs = [("ink on paper", t["ink"], t["paper"], 4.5),
+                 ("ink2 on paper", t["ink2"], t["paper"], 4.5),
+                 ("muted on paper", t["muted"], t["paper"], 4.5),
+                 ("paper on ink (primary button)", t["paper"], t["ink"], 4.5),
+                 ("ink line on page (footer)", t["ink"], t["page"], 3.0),
+                 ("chalk line on paper (cheetah)", t["chalk"], t["paper"], 3.0)]
+        for label, fg, bg, need in pairs:
+            r = contrast(fg, bg)
+            print(f"  {name:5} {label:30} {r:5.2f}:1 (need {need}) {'ok' if r >= need else 'FAIL'}")
+            if r < need:
+                fails.append(f"{name}: {label}")
+    if fails:
+        raise SystemExit("contrast check failed: " + "; ".join(fails))
 
 
-# ---------------------------------------------------------------- helpers
+# ---------------------------------------------------------------- fonts
 
-def polyline(points):
-    return "M" + " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
+class Fonts:
+    def __init__(self, directory):
+        self.dir = Path(directory)
 
-
-def path_length(points):
-    return sum(hypot(b[0] - a[0], b[1] - a[1]) for a, b in zip(points, points[1:]))
-
-
-def smoothstep(edge0, edge1, x):
-    u = min(max((x - edge0) / (edge1 - edge0), 0.0), 1.0)
-    return u * u * (3 - 2 * u)
-
-
-def phasor(cx, cy, r, t, stroke=3.0, dot=4.0):
-    """Three-phase phasor set, L1 drawn at 90 degrees, 120 degrees apart."""
-    parts = []
-    for angle, key in ((90, "mint"), (-30, "amber"), (210, "slate")):
-        x = cx + r * cos(radians(angle))
-        y = cy - r * sin(radians(angle))
-        parts.append(
-            f'<line x1="{cx}" y1="{cy}" x2="{x:.1f}" y2="{y:.1f}" stroke="{t[key]}" '
-            f'stroke-width="{stroke}" stroke-linecap="round"/>'
-            f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{dot}" fill="{t[key]}"/>')
-    return "".join(parts)
-
-
-def card(w, h, t):
-    return (f'<rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" rx="12" '
-            f'fill="{t["card"]}" stroke="{t["border"]}"/>')
+    def face(self, role, text):
+        """An @font-face rule for one role, subset to the characters in text."""
+        family, weight, style, fname = FONT_FILES[role]
+        font = TTFont(self.dir / fname)
+        opts = subset.Options()
+        opts.flavor = "woff2"
+        opts.layout_features = ["kern", "liga", "lnum"]
+        opts.name_IDs = []
+        opts.notdef_outline = True
+        sub = subset.Subsetter(opts)
+        sub.populate(text=text + " ")
+        sub.subset(font)
+        buf = io.BytesIO()
+        font.flavor = "woff2"
+        font.save(buf)
+        data = base64.b64encode(buf.getvalue()).decode()
+        alias = f"bp-{role}"
+        return (f'@font-face{{font-family:"{alias}";font-weight:{weight};font-style:{style};'
+                f'src:url(data:font/woff2;base64,{data}) format("woff2")}}',
+                f'"{alias}", "{family}", Georgia, serif' if role != "mono"
+                else f'"{alias}", "{family}", ui-monospace, monospace')
 
 
-def svg(w, h, body, title):
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" '
-            f'xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 {w} {h}" '
-            f'width="{w}" height="{h}" role="img" aria-label="{title}">\n'
-            f'<title>{title}</title>\n{body}\n</svg>\n')
+# ---------------------------------------------------------------- the cheetah
+
+# One cheetah drawn as line ink, running right, paws on y=56, in a 120 x 60 box.
+# Deep chest, tucked waist, long legs, small head with the tear mark. Two gallop
+# poses swapped by opacity: legs extended, then gathered under the body.
+CHEETAH_BODY = {
+    "a": ("M22,24 C40,16 66,14 88,20",                                  # back
+          "M88,33 C78,38 64,33 52,31 C40,30 30,32 24,31",               # chest to belly
+          "M22,24 C18,26 18,30 24,31"),                                 # rump
+    "b": ("M24,22 C40,10 64,10 86,18",
+          "M86,32 C76,36 64,30 52,28 C40,28 32,31 26,30",
+          "M24,22 C20,24 20,28 26,30"),
+}
+CHEETAH_LEGS = {
+    "a": ("M86,32 L100,44 L114,48", "M82,34 L94,47 L106,54",
+          "M28,30 L14,42 L2,46", "M32,32 L22,46 L10,54"),
+    "b": ("M84,31 L76,45 L70,56", "M80,33 L70,46 L60,53",
+          "M28,29 L42,44 L52,56", "M32,31 L48,42 L58,50"),
+}
+CHEETAH_HEAD = ("M88,20 C94,16 98,13 104,12",                              # neck, top
+                "M88,33 C95,29 100,24 105,20",                              # neck, under
+                "M104,11 C110,8 116,10 117,14 C118,18 112,21 105,20",       # head
+                "M106,10 L107,6 L110,9",                                    # ear
+                "M111,15 C111,17 110,19 108,21",                            # tear mark
+                "M22,25 C10,27 4,35 2,27")                                  # tail
+CHEETAH_DOTS = ((38, 22), (48, 20), (58, 19), (68, 19), (78, 21),
+                (44, 26), (54, 25), (64, 25), (74, 26))
 
 
-# ---------------------------------------------------------------- banner
+def cheetah(t, pose="run"):
+    """Return the cheetah group. pose 'run' swaps the two poses; 'a' or 'b' holds one."""
+    ink = t["chalk"]   # Leonardo's animal studies are red chalk
+    common = (f'fill="none" stroke="{ink}" stroke-width="2" '
+              f'stroke-linecap="round" stroke-linejoin="round"')
+    head = "".join(f'<path d="{d}"/>' for d in CHEETAH_HEAD)
+    dots = "".join(f'<circle cx="{x}" cy="{y}" r="1.4" fill="{ink}" stroke="none"/>' for x, y in CHEETAH_DOTS)
+    eye = f'<circle cx="112" cy="13" r="1.3" fill="{ink}" stroke="none"/>'
 
-def banner(t):
-    """A harmonic-rich current settles into a clean 50 Hz sine past an active filter."""
-    w, h = 960, 352
-    x0, x1, base, amp, cycles = 64, 896, 262, 26, 6
-    lam = (x1 - x0) / cycles
-    filter_x = 475
+    def frame(key, cls):
+        body = "".join(f'<path d="{d}"/>' for d in CHEETAH_BODY[key])
+        legs = "".join(f'<path d="{d}"/>' for d in CHEETAH_LEGS[key])
+        return f'<g class="{cls}">{body}{legs}</g>'
 
-    pts = []
-    for i in range(int(x1 - x0) + 1):
-        x = x0 + i
-        th = 2 * pi * (x - x0) / lam
-        distortion = 1 - smoothstep(330, 620, x)
-        v = sin(th) + distortion * (0.30 * sin(5 * th) + 0.18 * sin(7 * th) + 0.10 * sin(11 * th))
-        pts.append((x, base - amp * v))
-    wave = polyline(pts)
-    length = path_length(pts)
-    dash = 90
-    dur = "7s"
-
-    ticks = "".join(
-        f'<line x1="{x0 + k * lam / 2:.1f}" y1="{base - 4}" x2="{x0 + k * lam / 2:.1f}" '
-        f'y2="{base + 4}"/>' for k in range(cycles * 2 + 1))
-
-    body = f'''<defs>
-  <linearGradient id="clean" gradientUnits="userSpaceOnUse" x1="{x0}" y1="0" x2="{x1}" y2="0">
-    <stop offset="0" stop-color="{t["amber"]}"/>
-    <stop offset="0.36" stop-color="{t["amber"]}"/>
-    <stop offset="0.66" stop-color="{t["mint"]}"/>
-    <stop offset="1" stop-color="{t["mint"]}"/>
-  </linearGradient>
-</defs>
-{card(w, h, t)}
-
-<!-- scope axis: the wave reads as a measurement, not a decoration -->
-<g stroke="{t["slate"]}" stroke-width="1" opacity="0.55">
-  <line x1="{x0}" y1="{base}" x2="{x1}" y2="{base}"/>
-  {ticks}
-</g>
-<line x1="{filter_x}" y1="206" x2="{filter_x}" y2="304" stroke="{t["slate"]}"
-      stroke-width="1.2" stroke-dasharray="4 5"/>
-
-<path id="wave" d="{wave}" fill="none" stroke="url(#clean)" stroke-width="2.6"
-      stroke-linejoin="round" stroke-linecap="round"/>
-
-<!-- oscilloscope trace sweeping left to right -->
-<g opacity="0">
-  <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.04;0.71;0.75;1"
-           dur="{dur}" repeatCount="indefinite"/>
-  <path d="{wave}" fill="none" stroke="{t["trace"]}" stroke-width="3.4" stroke-linecap="round"
-        stroke-dasharray="{dash} {length + 200:.0f}" stroke-dashoffset="{dash}">
-    <animate attributeName="stroke-dashoffset" values="{dash};{dash - length:.1f};{dash - length:.1f}"
-             keyTimes="0;0.75;1" dur="{dur}" repeatCount="indefinite"/>
-  </path>
-  <g>
-    <animateMotion dur="{dur}" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.75;1"
-                   calcMode="linear"><mpath xlink:href="#wave"/></animateMotion>
-    <circle r="11" fill="{t["mint"]}" opacity="0.28"/>
-    <circle r="4.5" fill="{t["trace"]}"/>
-  </g>
-</g>
-
-<!-- phasor mark, rotating counter-clockwise as phasors do -->
-<g transform="translate(852,100)">
-  <circle r="44" fill="none" stroke="{t["border"]}" stroke-width="1.5"/>
-  <g>
-    <animateTransform attributeName="transform" type="rotate" from="0" to="-360"
-                      dur="24s" repeatCount="indefinite"/>
-    {phasor(0, 0, 36, t)}
-  </g>
-  <circle r="3" fill="{t["fg"]}"/>
-</g>
-
-<text x="64" y="128" fill="{t["fg"]}" font-family="{SANS_DISPLAY}" font-size="76"
-      font-weight="600" letter-spacing="-0.5">Adam Muhammad</text>
-<text x="64" y="184" fill="{t["muted"]}" font-family="{SANS}" font-size="30">Engineered to outrun.</text>
-
-<g font-family="{MONO}" font-size="17">
-  <text x="{x0}" y="334" fill="{t["amber_text"]}">h5 · h7 · h11</text>
-  <text x="{filter_x}" y="334" fill="{t["muted"]}" text-anchor="middle">active filter</text>
-  <text x="{x1}" y="334" fill="{t["mint_text"]}" text-anchor="end">50 Hz fundamental</text>
-</g>'''
-    return svg(w, h, body, "Adam Muhammad. Engineered to outrun.")
+    if pose == "run":
+        frames = frame("a", "pose-a") + frame("b", "pose-b")
+    else:
+        frames = frame(pose, "pose-still")
+    return f'<g {common}>{frames}{head}{dots}{eye}</g>'
 
 
-# ---------------------------------------------------------------- section glyphs
-
-GX0, GX1, GCY, GAMP = 712, 868, 44, 16
-GW = GX1 - GX0
-
-
-def glyph_samples(t):
-    """Activity: a sampled signal, one cycle, thirteen samples."""
-    out = [f'<line x1="{GX0}" y1="{GCY}" x2="{GX1}" y2="{GCY}" stroke="{t["slate"]}" stroke-width="1.5"/>']
-    for i in range(13):
-        x = GX0 + i * GW / 12
-        y = GCY - GAMP * sin(2 * pi * i / 12)
-        out.append(f'<line x1="{x:.1f}" y1="{GCY}" x2="{x:.1f}" y2="{y:.1f}" stroke="{t["mint"]}" stroke-width="2"/>'
-                   f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3" fill="{t["mint"]}"/>')
-    return "".join(out)
+GALLOP_CSS = """
+.pose-a{animation:gallop .34s steps(1,end) infinite}
+.pose-b{animation:gallop .34s steps(1,end) infinite reverse;opacity:0}
+@keyframes gallop{0%{opacity:1}50%{opacity:0}100%{opacity:1}}
+@media (prefers-reduced-motion: reduce){
+  .pose-a,.pose-b,.run,.draw,.drift{animation:none!important}
+  .pose-b{opacity:0}.pose-a{opacity:1}
+}"""
 
 
-def glyph_converge(t):
-    """OT / IT: two signals whose phase difference closes to zero."""
-    lam = GW / 3
-    a, b = [], []
-    for i in range(GW + 1):
-        x = GX0 + i
-        th = 2 * pi * i / lam
-        phi = 1.4 * (1 - i / GW)
-        a.append((x, GCY - GAMP * sin(th + phi)))
-        b.append((x, GCY - GAMP * sin(th - phi)))
-    common = 'fill="none" stroke-width="2.4" stroke-linecap="round"'
-    return (f'<path d="{polyline(a)}" stroke="{t["amber"]}" {common}/>'
-            f'<path d="{polyline(b)}" stroke="{t["mint"]}" {common}/>')
+# ---------------------------------------------------------------- pieces
+
+def svg(w, h, body, title, style):
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" '
+            f'role="img" aria-label="{title}">\n<title>{title}</title>\n'
+            f'<style>{style}</style>\n{body}\n</svg>\n')
 
 
-def glyph_phasor(t):
-    """Field record: the three-phase set the work is built on."""
-    cx = GX1 - 24  # right-aligned with the wider glyphs
-    return (f'<circle cx="{cx}" cy="{GCY}" r="22" fill="none" stroke="{t["slate"]}" stroke-width="1.2"/>'
-            + phasor(cx, GCY, 18, t, stroke=2.4, dot=3))
+def rgba(hex_, a):
+    r, g, b = (int(hex_[i:i + 2], 16) for i in (1, 3, 5))
+    return f"rgba({r},{g},{b},{a})"
 
 
-def glyph_clock(t):
-    """Timeline: a clock signal, four periods."""
-    p = GW / 4
-    hi, lo = GCY - GAMP, GCY + GAMP
-    d = f"M{GX0},{lo}"
-    for k in range(4):
-        x = GX0 + k * p
-        d += f" V{hi} H{x + p / 2:.1f} V{lo} H{x + p:.1f}"
-    return (f'<path d="{d}" fill="none" stroke="{t["mint"]}" stroke-width="2.4" '
-            f'stroke-linejoin="round" stroke-linecap="round"/>')
+def sheet(w, h, t, double=True):
+    """The drafting sheet: ground plus a square keyline (and a second one 5px in)."""
+    out = (f'<rect width="{w}" height="{h}" fill="{t["paper"]}"/>'
+           f'<rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" fill="none" '
+           f'stroke="{rgba(t["ink"], t["rule_a"])}"/>')
+    if double:
+        out += (f'<rect x="5.5" y="5.5" width="{w - 11}" height="{h - 11}" fill="none" '
+                f'stroke="{rgba(t["ink"], t["rule2_a"])}"/>')
+    return out
 
 
-def glyph_burst(t):
-    """Contact: a transmitted burst, carrier under a raised envelope."""
-    lam = GW / 9
-    pts = []
-    for i in range(GW + 1):
-        env = sin(pi * i / GW)
-        pts.append((GX0 + i, GCY - GAMP * env * sin(2 * pi * i / lam)))
-    return (f'<path d="{polyline(pts)}" fill="none" stroke="{t["mint"]}" stroke-width="2.2" '
-            f'stroke-linecap="round"/>')
+def dimension(t, x0, x1, y, tick=14):
+    """A dimension string: hairline, 45-degree ticks and extension lines at both ends."""
+    c = rgba(t["ink"], t["rule_a"])
+    d = tick / 2 / 1.414
+    return (f'<g stroke="{c}" stroke-width="1">'
+            f'<line class="draw" x1="{x0}" y1="{y}" x2="{x1}" y2="{y}"/>'
+            f'<line x1="{x0}" y1="{y - 18}" x2="{x0}" y2="{y + 18}"/>'
+            f'<line x1="{x1}" y1="{y - 18}" x2="{x1}" y2="{y + 18}"/>'
+            f'<line x1="{x0 - d}" y1="{y + d}" x2="{x0 + d}" y2="{y - d}"/>'
+            f'<line x1="{x1 - d}" y1="{y + d}" x2="{x1 + d}" y2="{y - d}"/></g>')
+
+
+# ---------------------------------------------------------------- assets
+
+def banner(t, F):
+    """Title block: name, tagline, and the career as a dimension string 2019 to 2026,
+    the cheetah running its length."""
+    w, h = 960, 360
+    name, tag = "ADAM MUHAMMAD", "Engineered to outrun."
+    roles = [("Role", "Vincinian Engineer"), ("Day job", "Presales Engineer, PTTS")]
+    span = "7 YEARS IN THE FIELD"
+    f_disp, fam_disp = F.face("display", name + span)
+    f_body, fam_body = F.face("body", tag)
+    f_lab, fam_lab = F.face("label", "".join(a + b for a, b in roles))
+    f_mono, fam_mono = F.face("mono", "20196")
+    x0, x1, y = 96, 864, 262
+    run_px = x1 - x0 - 124
+    style = (f_disp + f_body + f_lab + f_mono + GALLOP_CSS +
+             f".run{{animation:run 7s linear infinite}}"
+             f"@keyframes run{{0%{{transform:translateX(0);opacity:0}}6%{{opacity:1}}"
+             f"88%{{opacity:1}}100%{{transform:translateX({run_px}px);opacity:0}}}}"
+             f".draw{{transform-box:fill-box;transform-origin:left;animation:draw 1.2s cubic-bezier(.2,.7,.2,1) both}}"
+             f"@keyframes draw{{from{{transform:scaleX(0)}}to{{transform:scaleX(1)}}}}")
+    cells = []
+    bx, by, cw, ch = 568, 44, 344, 62
+    for i, (label, value) in enumerate(roles):
+        cy = by + i * ch
+        cells.append(f'<rect x="{bx}" y="{cy}" width="{cw}" height="{ch}" fill="none" '
+                     f'stroke="{rgba(t["ink"], t["rule_a"])}"/>'
+                     f'<text x="{bx + 14}" y="{cy + 22}" font-family=\'{fam_lab}\' font-weight="500" '
+                     f'font-size="20" fill="{t["muted"]}">{label}</text>'
+                     f'<text x="{bx + 14}" y="{cy + 50}" font-family=\'{fam_lab}\' font-weight="500" '
+                     f'font-size="27" fill="{t["ink"]}">{value}</text>')
+    body = f'''{sheet(w, h, t)}
+<text x="48" y="122" font-family='{fam_disp}' font-weight="600" font-size="52" letter-spacing="0.5" fill="{t["ink"]}">{name}</text>
+<text x="50" y="172" font-family='{fam_body}' font-style="italic" font-size="34" fill="{t["ink2"]}">{tag}</text>
+{"".join(cells)}
+{dimension(t, x0, x1, y)}
+<text x="{x0}" y="308" font-family='{fam_mono}' font-weight="500" font-size="21" fill="{t["ink"]}" text-anchor="middle">2019</text>
+<text x="{x1}" y="308" font-family='{fam_mono}' font-weight="500" font-size="21" fill="{t["ink"]}" text-anchor="middle">2026</text>
+<text x="{(x0 + x1) / 2}" y="308" font-family='{fam_disp}' font-weight="600" font-size="30" letter-spacing="1" style="font-variant-numeric:lining-nums" fill="{t["ink"]}" text-anchor="middle">{span}</text>
+<g transform="translate({x0 + 4},{y - 57})"><g class="run">{cheetah(t)}</g></g>'''
+    return svg(w, h, body, "Adam Muhammad, Vincinian Engineer; day job Presales Engineer at PTTS, Jakarta. Engineered to outrun. In the field from 2019 to 2026.", style)
 
 
 SECTIONS = [
-    ("activity",     "01", "Activity",            glyph_samples),
-    ("convergence",  "02", "OT / IT Convergence", glyph_converge),
-    ("field-record", "03", "Field Record",        glyph_phasor),
-    ("timeline",     "04", "Timeline",            glyph_clock),
-    ("contact",      "05", "Contact",             glyph_burst),
+    ("projects",     "01", "Things Built"),
+    ("convergence",  "02", "OT / IT Convergence"),
+    ("field-record", "03", "Field Record"),
+    ("timeline",     "04", "Field Years"),
+    ("activity",     "05", "On the Bench"),
+    ("contact",      "06", "Start a Project"),
 ]
 
 
-def header(t, index, title, glyph):
-    # SVG type scales with the column: ~0.4x on a 360 px phone, ~0.9x on desktop.
-    # 36 keeps the title near 14 px on mobile so it never drops below body text weight.
-    w, h = 900, 88
-    body = (f'{card(w, h, t)}\n'
-            f'<text x="32" y="56" fill="{t["mint_text"]}" font-family="{MONO}" font-size="24">{index}</text>\n'
-            f'<text x="84" y="57" fill="{t["fg"]}" font-family="{SANS}" font-size="36" '
-            f'font-weight="600">{title}</text>\n'
-            f'{glyph(t)}')
-    return svg(w, h, body, f"{index} {title}")
+def header(t, F, index, title, step, steps):
+    """A sheet-numbered section head. The cheetah's place on the track advances one
+    step per section, so it keeps pace with a reader scrolling down the profile."""
+    w, h = 900, 96
+    f_disp, fam_disp = F.face("display", title.upper())
+    f_mono, fam_mono = F.face("mono", index)
+    tx0, tx1, ty = 640, 892, 80
+    scale = 0.65
+    cw = 120 * scale
+    x = tx0 + (tx1 - tx0 - cw) * step / steps
+    # No filled ground: the theme keeps one sheet a page (the banner); a head is type and a rule.
+    body = f'''<line x1="0" y1="{h - 1}" x2="{w}" y2="{h - 1}" stroke="{rgba(t["ink"], t["rule_a"])}" stroke-width="1"/>
+<text x="0" y="66" font-family='{fam_mono}' font-weight="500" font-size="26" fill="{t["ink"]}">{index}</text>
+<text x="56" y="68" font-family='{fam_disp}' font-weight="600" font-size="44" letter-spacing="0.5" fill="{t["ink"]}">{title.upper()}</text>
+<line x1="{tx0}" y1="{ty}" x2="{tx1}" y2="{ty}" stroke="{rgba(t["ink"], t["rule2_a"])}" stroke-width="1"/>
+<line x1="{tx0}" y1="{ty}" x2="{x + cw / 2:.1f}" y2="{ty}" stroke="{rgba(t["ink"], t["rule_a"])}" stroke-width="2"/>
+<line x1="{tx1}" y1="{ty - 8}" x2="{tx1}" y2="{ty + 8}" stroke="{rgba(t["ink"], t["rule_a"])}" stroke-width="1"/>
+<g transform="translate({x:.1f},{ty - 57 * scale}) scale({scale})">{cheetah(t)}</g>'''
+    return svg(w, h, body, f"{index} {title}", f_disp + f_mono + GALLOP_CSS)
 
 
-# ---------------------------------------------------------------- footer
-
-def footer(t):
-    """Three-phase supply, L1 L2 L3 at 120 degrees, drifting slowly left."""
-    w, h, lam, amp, base = 900, 124, 225, 24, 52
+def footer(t, F):
+    """Three-phase supply drawn to drafting convention (solid, dashed, dotted), and the
+    cheetah arrived at the finish post."""
+    w, h, lam, amp, base = 900, 150, 225, 22, 52
+    labels = ("L1", "L2", "L3")
+    f_lab, fam_lab = F.face("mono", "".join(labels))   # phase numbers are drawing numbers: mono
+    dashes = ("", ' stroke-dasharray="10 6"', ' stroke-dasharray="1.5 5"')
     waves = []
-    for shift, key in ((0, "mint"), (120, "amber"), (240, "slate")):
-        pts = [(x, base - amp * sin(2 * pi * x / lam - radians(shift)))
-               for x in range(0, w + lam + 1, 2)]
-        waves.append(f'<path d="{polyline(pts)}" fill="none" stroke="{t[key]}" '
-                     f'stroke-width="2.2" stroke-linecap="round"/>')
-
-    legend, x = [], 358
-    for label, key in (("L1", "mint"), ("L2", "amber"), ("L3", "slate")):
-        legend.append(f'<line x1="{x}" y1="109" x2="{x + 18}" y2="109" stroke="{t[key]}" '
-                      f'stroke-width="3" stroke-linecap="round"/>'
-                      f'<text x="{x + 25}" y="114" fill="{t["muted"]}">{label}</text>')
-        x += 70
-
+    for shift, dash in zip((0, 120, 240), dashes):
+        pts = " ".join(f"{x},{base - amp * sin(2 * pi * x / lam - radians(shift)):.1f}"
+                       for x in range(0, w + lam + 1, 3))
+        waves.append(f'<path d="M{pts}" fill="none" stroke="{t["ink"]}" stroke-width="1.8"'
+                     f' stroke-linecap="round"{dash}/>')
+    legend, lx = [], 330
+    for label, dash in zip(labels, dashes):
+        legend.append(f'<line x1="{lx}" y1="126" x2="{lx + 22}" y2="126" stroke="{t["ink"]}" '
+                      f'stroke-width="2" stroke-linecap="round"{dash}/>'
+                      f'<text x="{lx + 30}" y="131" font-family=\'{fam_lab}\' font-weight="500" '
+                      f'font-size="15" fill="{t["ink"]}">{label}</text>')
+        lx += 80
+    post_x = 870
+    style = (f_lab + GALLOP_CSS +
+             f".drift{{animation:drift 12s linear infinite}}"
+             f"@keyframes drift{{from{{transform:translateX(0)}}to{{transform:translateX(-{lam}px)}}}}")
     body = f'''<defs>
-  <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="#000"/><stop offset="0.12" stop-color="#fff"/>
-    <stop offset="0.88" stop-color="#fff"/><stop offset="1" stop-color="#000"/>
-  </linearGradient>
-  <mask id="edges" maskUnits="userSpaceOnUse" x="0" y="0" width="{w}" height="96">
-    <rect width="{w}" height="96" fill="url(#fade)"/>
-  </mask>
+  <linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="#000"/><stop offset="0.1" stop-color="#fff"/><stop offset="0.62" stop-color="#fff"/><stop offset="0.74" stop-color="#000"/></linearGradient>
+  <mask id="edges" maskUnits="userSpaceOnUse" x="0" y="0" width="{w}" height="96"><rect width="{w}" height="96" fill="url(#fade)"/></mask>
 </defs>
-<g mask="url(#edges)">
-  <g>
-    <animateTransform attributeName="transform" type="translate" from="0 0" to="-{lam} 0"
-                      dur="12s" repeatCount="indefinite"/>
-    {"".join(waves)}
-  </g>
-</g>
-<g font-family="{MONO}" font-size="15">{"".join(legend)}</g>'''
-    return svg(w, h, body, "Three-phase supply, L1 L2 L3")
+<g mask="url(#edges)"><g class="drift">{"".join(waves)}</g></g>
+<line x1="{post_x}" y1="40" x2="{post_x}" y2="104" stroke="{t["ink"]}" stroke-width="1.5"/>
+<line x1="{post_x - 5}" y1="109" x2="{post_x + 5}" y2="99" stroke="{t["ink"]}" stroke-width="1.5"/>
+<g transform="translate({post_x - 128},{104 - 57})">{cheetah(t, pose="a")}</g>
+{"".join(legend)}'''
+    return svg(w, h, body, "Three-phase supply, L1 L2 L3, and the cheetah at the finish", style)
 
 
-# ---------------------------------------------------------------- buttons
-
-def button(t, label, w, primary):
-    """Link targets for the README. Rendered at height=44 so every one meets the
-    44 px tap-target floor on phones, where shields.io badges sit at 20 px."""
-    h = 44
+def button(t, F, label, w, primary):
+    h = 48
+    f_lab, fam = F.face("label", label)
     if primary:
-        face = f'<rect width="{w}" height="{h}" rx="12" fill="{t["btn"]}"/>'
-        ink = t["on_btn"]
+        face = f'<rect width="{w}" height="{h}" fill="{t["ink"]}"/>'
+        ink = t["paper"]
     else:
-        face = (f'<rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" rx="12" '
-                f'fill="{t["card"]}" stroke="{t["border"]}"/>')
-        ink = t["fg"]
-    body = (f'{face}\n<text x="{w / 2}" y="28" text-anchor="middle" fill="{ink}" '
-            f'font-family="{SANS}" font-size="17" font-weight="600">{label}</text>')
-    return svg(w, h, body, label)
+        face = (f'<rect width="{w}" height="{h}" fill="{t["paper"]}"/>'
+                f'<rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" fill="none" stroke="{t["ink"]}"/>')
+        ink = t["ink"]
+    body = (f'{face}<text x="{w / 2}" y="30" text-anchor="middle" fill="{ink}" '
+            f'font-family=\'{fam}\' font-weight="500" font-size="20">{label}</text>')
+    return svg(w, h, body, label, f_lab)
 
 
-BUTTONS = [
-    ("button-email", "Email a project brief", 252, True),
-    ("button-site",  "dummjo.dev",            136, False),
-]
+BUTTONS = [("button-email", "Email a project brief", 232, True),
+           ("button-site", "dummjo.dev", 132, False)]
 
-
-# ---------------------------------------------------------------- build
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--fonts", required=True, help="directory holding the four .woff2 files")
+    F = Fonts(ap.parse_args().fonts)
     print("palette contrast:")
     check_palette()
-    ASSETS.mkdir(exist_ok=True)
     written = []
-    for name, t in THEMES.items():
-        files = {f"banner-{name}.svg": banner(t), f"footer-{name}.svg": footer(t)}
-        for slug, index, title, glyph in SECTIONS:
-            files[f"header-{slug}-{name}.svg"] = header(t, index, title, glyph)
+    for name, t in SHEETS.items():
+        files = {f"banner-{name}.svg": banner(t, F), f"footer-{name}.svg": footer(t, F)}
+        for i, (slug, index, title) in enumerate(SECTIONS):
+            files[f"header-{slug}-{name}.svg"] = header(t, F, index, title, i, len(SECTIONS))
         for slug, label, w, primary in BUTTONS:
-            files[f"{slug}-{name}.svg"] = button(t, label, w, primary)
+            files[f"{slug}-{name}.svg"] = button(t, F, label, w, primary)
         for fname, content in files.items():
             (ASSETS / fname).write_text(content, encoding="utf-8")
             written.append((fname, len(content.encode())))
