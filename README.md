@@ -1,53 +1,44 @@
+<!-- Hallmark · v2.0.0 · redesign: full · theme: blueprint, brownline sheet by request (Leonardo notebook) (dealt 2/3, seed industrial-electrical-automation-engineer-1118·c62eab96·2026-11-09·r0) · dark: night sepia, derived · type: Cormorant Garamond by request, IBM Plex Mono for measurements · signature: the career as a dimension string, 2019 to 2026, a red-chalk cheetah running it · reworded "7+ years in the field" to that dimension string · 63 and 19 named the middle-dot strings and the dash · waive 20, 25, 34, 48, 77: GitHub owns the page CSS and sections · waive 80 and the second-colour do-not: the owner asked for an animal character and to keep Pac-Man, the typing line and the skill icons · waive scroll-following: a README runs no script, so the cheetah advances one step per section header · waive 49b: the client name Prima Transmission wraps at 320px and is not shortened · dropped the PTTS supply catalogue: the owner asked for a personal profile with PTTS as a side note · finish-review: subagent, fix, 8 findings, 6 resolved, 2 partial (phone-width banner variant not shipped: unverified that GitHub keeps width media queries; dimension value kept below the line, the cheetah runs above it) · gap: third-party cards and dark sheet not seen in review captures -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/banner-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/banner-light.svg">
-  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/banner-dark.svg" width="100%" alt="Adam Muhammad. Engineered to outrun. A harmonic-rich waveform settling into a clean 50 Hz sine past an active filter.">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/banner-dark.svg" width="100%" alt="Adam Muhammad, Vincinian Engineer; day job Presales Engineer at PTTS, Jakarta. Engineered to outrun. In the field from 2019 to 2026.">
 </picture>
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=20&duration=3200&pause=1100&color=3DDC97&center=true&vCenter=true&width=640&lines=Electrical+%26+Automation+Engineer+at+PTTS;Presales+Engineer+%26+System+Integrator;ABB+Drive+Sizing+%26+Commissioning;Crane+Control%3A+Anti-Sway%2C+Load+Weighing%2C+STO;Power+Quality%3A+THD+Analysis+%26+Filter+Sizing">
-    <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=20&duration=3200&pause=1100&color=0B7D54&center=true&vCenter=true&width=640&lines=Electrical+%26+Automation+Engineer+at+PTTS;Presales+Engineer+%26+System+Integrator;ABB+Drive+Sizing+%26+Commissioning;Crane+Control%3A+Anti-Sway%2C+Load+Weighing%2C+STO;Power+Quality%3A+THD+Analysis+%26+Filter+Sizing">
-    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=20&duration=3200&pause=1100&color=3DDC97&center=true&vCenter=true&width=640&lines=Electrical+%26+Automation+Engineer+at+PTTS;Presales+Engineer+%26+System+Integrator;ABB+Drive+Sizing+%26+Commissioning;Crane+Control%3A+Anti-Sway%2C+Load+Weighing%2C+STO;Power+Quality%3A+THD+Analysis+%26+Filter+Sizing" alt="Electrical and Automation Engineer at PTTS; Presales Engineer and System Integrator; ABB Drive Sizing and Commissioning; Crane Control: Anti-Sway, Load Weighing, Safe Torque Off (STO); Power Quality: THD Analysis and Filter Sizing" height="34">
-  </picture>
-</p>
-
-**Adam Muhammad** (dummJo), electrical and automation engineer at **PT Prima Tekindo Tirta Sejahtera (PTTS)** in Jakarta, with 7+ years in the field since 2019. Presales engineer and system integrator since 2025. My scope runs from technical proposal through commissioning, across industrial automation, power quality and electrical systems.
-
-**What you can get.** Through PTTS, an Authorized Value Provider (AVP) of PT ABB Sakti Industri: ABB drives and softstarters, ABB Smartsensor and Water Analyst measurement, power quality solutions, panel manufacturing, automation and PLC systems, fire pump systems, pump installation and mechanical service. From me: product sizing, technical proposals and BOQ, drive commissioning, and PLC and control-system integration.
-
-**How to start.** Equipment supply and service are quoted and contracted by PTTS: call (021) 629 3028. For the technical side, email me a short brief with the site, the equipment and what has to work.
+Electrical and automation engineer in Jakarta since 2019: drives, power, software.
 
 <p>
   <a href="mailto:1437yb@gmail.com?subject=Project%20brief"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-light.svg"><img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-dark.svg" height="44" alt="Email a project brief"></picture></a>&nbsp;
   <a href="https://dummjo.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-site-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-site-light.svg"><img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-site-dark.svg" height="44" alt="dummjo.dev"></picture></a>
 </p>
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Cormorant+Garamond&weight=600&size=24&duration=3200&pause=1100&color=ecdcc1&center=true&vCenter=true&width=640&lines=Vincinian+Engineer;ABB+Drive+Sizing+%26+Commissioning;Crane+Control%3A+Anti-Sway%2C+Load+Weighing%2C+STO;Power+Quality%3A+THD+Analysis+%26+Filter+Sizing;Builder+of+Engineering+Tools">
+    <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=Cormorant+Garamond&weight=600&size=24&duration=3200&pause=1100&color=3c2111&center=true&vCenter=true&width=640&lines=Vincinian+Engineer;ABB+Drive+Sizing+%26+Commissioning;Crane+Control%3A+Anti-Sway%2C+Load+Weighing%2C+STO;Power+Quality%3A+THD+Analysis+%26+Filter+Sizing;Builder+of+Engineering+Tools">
+    <img src="https://readme-typing-svg.demolab.com?font=Cormorant+Garamond&weight=600&size=24&duration=3200&pause=1100&color=ecdcc1&center=true&vCenter=true&width=640&lines=Vincinian+Engineer;ABB+Drive+Sizing+%26+Commissioning;Crane+Control%3A+Anti-Sway%2C+Load+Weighing%2C+STO;Power+Quality%3A+THD+Analysis+%26+Filter+Sizing;Builder+of+Engineering+Tools" alt="Vincinian Engineer; ABB Drive Sizing and Commissioning; Crane Control: Anti-Sway, Load Weighing, Safe Torque Off (STO); Power Quality: THD Analysis and Filter Sizing; Builder of Engineering Tools" height="34">
+  </picture>
+</p>
+
 <br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-supply-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-supply-light.svg">
-  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-supply-dark.svg" width="100%" alt="01 What PTTS Supplies">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-projects-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-projects-light.svg">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-projects-dark.svg" width="100%" alt="01 Things Built">
 </picture>
 
-PTTS is a Jakarta engineering company founded in March 2019. It started in pump maintenance and mechanical work and now also covers electrical power quality, industrial automation and variable speed drives. The table lists company supply lines; it is not a list of work I do personally.
+Things I built, and where each one stands.
 
-| Need | Supplied through PTTS |
-| :--- | :--- |
-| **Drives and starters** | ABB drives: `ACS880` (crane and hoist, DTC), `ACS580` (general purpose and HVAC), `ACQ580` (multipump), `ACS380`. ABB PSE softstarter. Drive Composer Pro. |
-| **Service programme** | ABB Motion Complete Care. |
-| **Measurement** | ABB Smartsensor and ABB Water Analyst measurement systems. |
-| **Power quality** | Power quality solutions. |
-| **Panels and automation** | Electrical panel box control and manufacturing. Automation, PLC and monitoring systems. |
-| **Pumps** | Fire pump systems and service. Pump installation: Teral, Lowara, Tsurumi. |
-| **Mechanical** | Dynamic balancing, repair and maintenance. Fu-Tsu root blower, mechanical coupling, Precima electromagnetic brake. |
-
-Authorized Value Provider (AVP) of PT ABB Sakti Industri · external partners: TENT enclosure, Stahl hoist, Simtex Fan.<br>
-Head office in Jakarta Pusat, branch in Jimbaran, Bali · (021) 629 3028 · [ptts.co.id](https://ptts.co.id)<br>
-This is my personal profile, not an official PTTS channel; company information is at ptts.co.id.
-
-*PTTS: precision in power, clarity in control, and reliable mechanical expertise.*
+| Project | What it does | Status |
+| :--- | :--- | :--- |
+| **[dummjo.dev](https://dummjo.dev)** | My site: Next.js 16 and Tailwind 4 in six languages, a vincinian design system with a Da Vinci sketch atmosphere. | My portfolio and the home of dummVinci Lab. |
+| **[PTTS Praxis](https://github.com/dummJo/DummVinci-Calculator)** | Electrical sizing suite in English and Indonesian: ABB VSD sizing, IEC 60909 short-circuit, cable, breaker, busbar and transformer calculators, and an ABB fault-code lookup. | On Vercel. Estimates for an engineer to check, not ABB selection-tool output. |
+| **Stadera** | Jastip business tracker: trips, multi-currency purchasing with locked transaction rates, jastip fees, profit and margin, invoices. | Part of dummVinci Lab on dummjo.dev. |
+| **Foto Kita Blur** | Browser camera toy inspired by Sal Priadi’s “Foto Kita Blur”: hold a peace sign and the frame blurs, then a polaroid is taken. Hand tracking runs in the browser; nothing is uploaded. | Part of dummVinci Lab on dummjo.dev. |
+| **[Prima Transmission](https://github.com/dummJo/primatransmission-facelift)** | Client work: the corporate website of PT Prima Anjaya Santoso, industrial drivetrain solutions. | 2026. |
+| **Condition-monitoring dashboard** (PTTS-owned; most commits mine) | Vibration alarms from ISO 10816 machine classes, alerts by Telegram or WhatsApp, role-based login. | Prototype, April to May 2026, demo data. |
+| **[rosetta-plc](https://github.com/dummJo/dummvinci-rosetta-plc)** | MCP server that drafts Mitsubishi MELSEC to ABB AC500 PLC migrations as reviewable IEC 61131-3 code. Flags hazards; never generates safety code. | Early prototype (0.2.0), not yet validated on a real project export. |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-convergence-dark.svg">
@@ -55,7 +46,7 @@ This is my personal profile, not an official PTTS channel; company information i
   <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-convergence-dark.svg" width="100%" alt="02 OT / IT Convergence">
 </picture>
 
-What I do myself, on PTTS projects and in my own engineering tools.
+What I do myself, on PTTS projects and in my own engineering tools. My scope runs from technical proposal through commissioning, across industrial automation, power quality and electrical systems.
 
 | Field side (OT) | Software side (IT) |
 | :--- | :--- |
@@ -84,39 +75,31 @@ Selected work from dummjo.dev. End clients are not named here.
 
 | Period | Work | Scope |
 | :---: | :--- | :--- |
-| **Ongoing** | **Power quality**<br>Active filters · voltage conditioners | Harmonic mitigation and voltage-sag protection for multiple manufacturing clients: product sizing, technical quotation and procurement support. |
-| **2025** | **Operations automation**<br>`n8n` · Notion API · LLM APIs | Workflow layer for PTTS operations: client follow-up, proposal-generation triggers, Notion integration and LLM-assisted document drafting. |
-| **2023 – present** | **ICSS and control-system integration**<br>DCS · industrial network | Instrumentation and control-system integration across industrial, food and beverage, and building-automation sectors: network infrastructure, DCS integration and commissioning support. |
+| **Ongoing** | **Power quality**<br>Active filters, voltage conditioners | Harmonic mitigation and voltage-sag protection for multiple manufacturing clients: product sizing, technical quotation and procurement support. |
+| **2025** | **Operations automation**<br>`n8n`, Notion API, LLM APIs | Workflow layer for PTTS operations: client follow-up, proposal-generation triggers, Notion integration and LLM-assisted document drafting. |
+| **2023 to present** | **ICSS and control-system integration**<br>DCS, industrial network | Instrumentation and control-system integration across industrial, food and beverage, and building-automation sectors: network infrastructure, DCS integration and commissioning support. |
 | **2022** | **Crane automation**<br>`ABB ACS880` + `N5050` Crane Control Program | Led a crane-control deployment in the Cilegon industrial corridor: anti-sway, load weighing and Safe Torque Off (STO). |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-timeline-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-timeline-light.svg">
-  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-timeline-dark.svg" width="100%" alt="04 Timeline">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-timeline-dark.svg" width="100%" alt="04 Field Years">
 </picture>
 
 | Year | Milestone |
 | :---: | :--- |
-| **2018** | **Casio Thailand**, four-month industrial internship · Nakhon Ratchasima · Indonesian Education Ministry overseas internship programme |
-| **2019** | **Electrical engineer** on job sites across Java · power distribution, motor control, industrial wiring |
+| **2018** | **Casio Thailand**, four-month industrial internship in Nakhon Ratchasima (Indonesian Education Ministry overseas internship programme) |
+| **2019** | **Electrical engineer** on job sites across Java: power distribution, motor control, industrial wiring |
 | **2020** | **ABB `ACS580`**, first solo VSD commissioning |
-| **2022** | **ABB `ACS880` + `N5050` crane control** · Cilegon |
-| **2024** | **Channel Partner Expert Day** · Shanghai · represented PTTS |
-| **2025 – present** | **Presales engineer and system integrator** role at PTTS · Jakarta |
+| **2022** | **ABB `ACS880` + `N5050` crane control** in Cilegon |
+| **2024** | **Channel Partner Expert Day** in Shanghai, representing PTTS |
+| **2025 to present** | **Presales engineer and system integrator** at PTTS, Jakarta |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-activity-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-activity-light.svg">
-  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-activity-dark.svg" width="100%" alt="05 Tools and Activity">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-activity-dark.svg" width="100%" alt="05 On the Bench">
 </picture>
-
-Software I built or co-built for engineering work, with its current status.
-
-| Tool | What it does | Status |
-| :--- | :--- | :--- |
-| **[PTTS Praxis](https://github.com/dummJo/DummVinci-Calculator)** | English and Indonesian web suite of electrical sizing tools: ABB VSD sizing with required panel airflow, IEC 60909 short-circuit, transformer, breaker, cable, busbar, selectivity, motor-starter and braking-resistor calculators, panel layout, and an ABB drive fault-code lookup. | Deployed on Vercel. Results are estimates for an engineer to check, not output of ABB's selection tools. |
-| **Condition-monitoring dashboard** (owned by PTTS; I made most of the commits) | Next.js, TypeScript and PostgreSQL. Vibration warning and fault thresholds approximated from ISO 10816 machine classes (class chosen by motor power and foundation), alarm alerts by Telegram or WhatsApp, role-based login, CSV export of active alarms, and client code for ABB's Powertrain cloud API (live connection not yet demonstrated). | Prototype, April to May 2026. Ships with a demo mode on sample data. |
-| **[dummvinci-rosetta-plc](https://github.com/dummJo/dummvinci-rosetta-plc)** | MCP server (a tool interface for AI assistants) that drafts Mitsubishi MELSEC to ABB AC500 V3 PLC migrations: parses instruction-list exports, cross-references devices, proposes I/O mapping onto AC500 S500 modules, and emits draft IEC 61131-3 Structured Text and PLCopen XML for review in Automation Builder. It flags semantic hazards for an engineer, marks detected safety functions as blockers, and does not generate safety code. | Early prototype, package version 0.2.0. Not yet validated against a real GX Developer export or an Automation Builder import. |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph-dark.svg">
@@ -126,19 +109,19 @@ Software I built or co-built for engineering work, with its current status.
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&rank_icon=github&bg_color=10171e&title_color=3ddc97&text_color=9aabb4&icon_color=3ddc97&border_color=1d2832&border_radius=12">
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&rank_icon=github&bg_color=f5f8f6&title_color=0b7d54&text_color=4c5b63&icon_color=109a68&border_color=dfe7e3&border_radius=12">
-    <img src="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&rank_icon=github&bg_color=10171e&title_color=3ddc97&text_color=9aabb4&icon_color=3ddc97&border_color=1d2832&border_radius=12" alt="GitHub stats" height="170">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&rank_icon=github&bg_color=2a1c10&title_color=ecdcc1&text_color=ecdcc1&icon_color=ecdcc1&border_color=ecdcc1&border_radius=0">
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&rank_icon=github&bg_color=e1ceb0&title_color=3c2111&text_color=6b4e3a&icon_color=3c2111&border_color=3c2111&border_radius=0">
+    <img src="https://github-readme-stats.shion.dev/api?username=dummJo&show_icons=true&rank_icon=github&bg_color=2a1c10&title_color=ecdcc1&text_color=ecdcc1&icon_color=ecdcc1&border_color=ecdcc1&border_radius=0" alt="GitHub stats" height="170">
   </picture>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&bg_color=10171e&title_color=3ddc97&text_color=9aabb4&border_color=1d2832&border_radius=12">
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&bg_color=f5f8f6&title_color=0b7d54&text_color=4c5b63&border_color=dfe7e3&border_radius=12">
-    <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&bg_color=10171e&title_color=3ddc97&text_color=9aabb4&border_color=1d2832&border_radius=12" alt="Most used languages" height="170">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&bg_color=2a1c10&title_color=ecdcc1&text_color=ecdcc1&border_color=ecdcc1&border_radius=0">
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&bg_color=e1ceb0&title_color=3c2111&text_color=6b4e3a&border_color=3c2111&border_radius=0">
+    <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=dummJo&layout=compact&bg_color=2a1c10&title_color=ecdcc1&text_color=ecdcc1&border_color=ecdcc1&border_radius=0" alt="Most used languages" height="170">
   </picture>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=dummJo&background=10171e&border=1d2832&border_radius=12&stroke=1d2832&ring=3ddc97&fire=f2b544&currStreakNum=eaf3ef&currStreakLabel=3ddc97&sideNums=eaf3ef&sideLabels=9aabb4&dates=9aabb4">
-    <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=dummJo&background=f5f8f6&border=dfe7e3&border_radius=12&stroke=dfe7e3&ring=109a68&fire=c27c06&currStreakNum=0f1a20&currStreakLabel=0b7d54&sideNums=0f1a20&sideLabels=4c5b63&dates=4c5b63">
-    <img src="https://streak-stats.demolab.com/?user=dummJo&background=10171e&border=1d2832&border_radius=12&stroke=1d2832&ring=3ddc97&fire=f2b544&currStreakNum=eaf3ef&currStreakLabel=3ddc97&sideNums=eaf3ef&sideLabels=9aabb4&dates=9aabb4" alt="Contribution streak" height="170">
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=dummJo&background=2a1c10&border=ecdcc1&border_radius=0&stroke=ecdcc1&ring=ecdcc1&fire=ecdcc1&currStreakNum=ecdcc1&currStreakLabel=ecdcc1&sideNums=ecdcc1&sideLabels=ecdcc1&dates=ecdcc1">
+    <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=dummJo&background=e1ceb0&border=3c2111&border_radius=0&stroke=3c2111&ring=3c2111&fire=3c2111&currStreakNum=3c2111&currStreakLabel=3c2111&sideNums=3c2111&sideLabels=6b4e3a&dates=6b4e3a">
+    <img src="https://streak-stats.demolab.com/?user=dummJo&background=2a1c10&border=ecdcc1&border_radius=0&stroke=ecdcc1&ring=ecdcc1&fire=ecdcc1&currStreakNum=ecdcc1&currStreakLabel=ecdcc1&sideNums=ecdcc1&sideLabels=ecdcc1&dates=ecdcc1" alt="Contribution streak" height="170">
   </picture>
 </p>
 
@@ -148,22 +131,15 @@ Software I built or co-built for engineering work, with its current status.
   <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-contact-dark.svg" width="100%" alt="06 Start a Project">
 </picture>
 
-A typical path for a drive, power quality or automation request (scope to be confirmed with PTTS per project):
-
-1. **Brief.** You send the site, the equipment and what has to work.
-2. **Sizing and quotation:** product selection, BOQ and a technical proposal.
-3. **Supply** of the equipment through PTTS.
-4. **Installation and commissioning,** as the scope requires.
-
-After-sales service options, such as the ABB Motion Complete Care service programme, are available through PTTS.
-
-Supply and service are quoted and contracted by PTTS: (021) 629 3028 · [ptts.co.id](https://ptts.co.id). Technical briefs can come to me by email; more about my work at [dummjo.dev](https://dummjo.dev).
+Have a drive to commission, a power quality problem, or an OT/IT bridge that has to hold? Send a short brief with the site, the equipment, and what has to work.
 
 <a href="mailto:1437yb@gmail.com?subject=Project%20brief"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-light.svg"><img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-dark.svg" height="44" alt="Email a project brief"></picture></a>
 
-*Bahasa Indonesia:* Kirim ringkasan singkat: lokasi, peralatan, dan apa yang harus berjalan. Untuk pasokan dan servis, hubungi PTTS di (021) 629 3028.
+*Bahasa Indonesia:* kirim ringkasan singkat: lokasi, peralatan, dan apa yang harus berjalan.
 
-Based in Jakarta · hybrid, on site or remote · [LinkedIn](https://linkedin.com/in/1437yb)
+Need ABB drives, panels or service supplied? That runs through my day job at PTTS, an ABB Authorized Value Provider: (021) 629 3028, [ptts.co.id](https://ptts.co.id). In 2023 ABB published [a story on PTTS](https://new.abb.com/news/detail/110834/abb-ability-mobile-connect-helps-ptts-bring-value-and-peace-of-mind-to-indonesian-customers) about remote drive commissioning support with ABB Ability™ Mobile Connect. This profile is personal, not an official PTTS channel.
+
+Based in Jakarta, working on site or remote. [LinkedIn](https://linkedin.com/in/1437yb), [dummjo.dev](https://dummjo.dev).
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/footer-dark.svg">
