@@ -20,6 +20,12 @@ Electrical and automation engineer in Jakarta since 2019: drives, power, softwar
   </picture>
 </p>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg" alt="Contribution graph" width="100%">
+</picture>
+
 <br/>
 
 <picture>
@@ -28,17 +34,13 @@ Electrical and automation engineer in Jakarta since 2019: drives, power, softwar
   <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-projects-dark.svg" width="100%" alt="01 Things Built">
 </picture>
 
-Things I built, and where each one stands.
-
-| Project | What it does | Status |
-| :--- | :--- | :--- |
-| **[dummjo.dev](https://dummjo.dev)** | My site: Next.js 16 and Tailwind 4 in six languages, a vincinian design system with a Da Vinci sketch atmosphere. | My portfolio and the home of dummVinci Lab. |
-| **[PTTS Praxis](https://github.com/dummJo/DummVinci-Calculator)** | Electrical sizing suite in English and Indonesian: ABB VSD sizing, IEC 60909 short-circuit, cable, breaker, busbar and transformer calculators, and an ABB fault-code lookup. | On Vercel. Estimates for an engineer to check, not ABB selection-tool output. |
-| **Stadera** | Jastip business tracker: trips, multi-currency purchasing with locked transaction rates, jastip fees, profit and margin, invoices. | Part of dummVinci Lab on dummjo.dev. |
-| **Foto Kita Blur** | Browser camera toy inspired by Sal Priadi’s “Foto Kita Blur”: hold a peace sign and the frame blurs, then a polaroid is taken. Hand tracking runs in the browser; nothing is uploaded. | Part of dummVinci Lab on dummjo.dev. |
-| **[Prima Transmission](https://github.com/dummJo/primatransmission-facelift)** | Client work: the corporate website of PT Prima Anjaya Santoso, industrial drivetrain solutions. | 2026. |
-| **Condition-monitoring dashboard** (PTTS-owned; most commits mine) | Vibration alarms from ISO 10816 machine classes, alerts by Telegram or WhatsApp, role-based login. | Prototype, April to May 2026, demo data. |
-| **[rosetta-plc](https://github.com/dummJo/dummvinci-rosetta-plc)** | MCP server that drafts Mitsubishi MELSEC to ABB AC500 PLC migrations as reviewable IEC 61131-3 code. Flags hazards; never generates safety code. | Early prototype (0.2.0), not yet validated on a real project export. |
+- **[dummjo.dev](https://dummjo.dev)**, my site and dummVinci Lab
+- **[PTTS Praxis](https://github.com/dummJo/DummVinci-Calculator)**, electrical sizing tools
+- **[rosetta-plc](https://github.com/dummJo/dummvinci-rosetta-plc)**, PLC migration helper
+- **Stadera**, a jastip tracker
+- **Foto Kita Blur**, a browser camera toy
+- **[Prima Transmission](https://github.com/dummJo/primatransmission-facelift)**, a client website
+- a condition-monitoring dashboard prototype
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-convergence-dark.svg">
@@ -59,9 +61,9 @@ What I do myself, on PTTS projects and in my own engineering tools. My scope run
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=ts,nodejs,nextjs,react,py,postgres,docker,linux,vercel,git,github&theme=dark">
-    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=ts,nodejs,nextjs,react,py,postgres,docker,linux,vercel,git,github&theme=light">
-    <img src="https://skillicons.dev/icons?i=ts,nodejs,nextjs,react,py,postgres,docker,linux,vercel,git,github&theme=dark" alt="TypeScript, Node.js, Next.js, React, Python, PostgreSQL, Docker, Linux, Vercel, Git, GitHub" >
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=ts,js,py,bash,html,css,md,react,nextjs,nodejs,nestjs,tailwind,threejs,prisma,postgres,supabase,docker,linux,githubactions,vercel,git,github&perline=11&theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=ts,js,py,bash,html,css,md,react,nextjs,nodejs,nestjs,tailwind,threejs,prisma,postgres,supabase,docker,linux,githubactions,vercel,git,github&perline=11&theme=light">
+    <img src="https://skillicons.dev/icons?i=ts,js,py,bash,html,css,md,react,nextjs,nodejs,nestjs,tailwind,threejs,prisma,postgres,supabase,docker,linux,githubactions,vercel,git,github&perline=11&theme=dark" alt="TypeScript, JavaScript, Python, Bash, HTML, CSS, Markdown, React, Next.js, Node.js, NestJS, Tailwind CSS, Three.js, Prisma, PostgreSQL, Supabase, Docker, Linux, GitHub Actions, Vercel, Git, GitHub" >
   </picture>
 </p>
 
@@ -73,12 +75,12 @@ What I do myself, on PTTS projects and in my own engineering tools. My scope run
 
 Selected work from dummjo.dev. End clients are not named here.
 
-| Period | Work | Scope |
-| :---: | :--- | :--- |
-| **Ongoing** | **Power quality**<br>Active filters, voltage conditioners | Harmonic mitigation and voltage-sag protection for multiple manufacturing clients: product sizing, technical quotation and procurement support. |
-| **2025** | **Operations automation**<br>`n8n`, Notion API, LLM APIs | Workflow layer for PTTS operations: client follow-up, proposal-generation triggers, Notion integration and LLM-assisted document drafting. |
-| **2023 to present** | **ICSS and control-system integration**<br>DCS, industrial network | Instrumentation and control-system integration across industrial, food and beverage, and building-automation sectors: network infrastructure, DCS integration and commissioning support. |
-| **2022** | **Crane automation**<br>`ABB ACS880` + `N5050` Crane Control Program | Led a crane-control deployment in the Cilegon industrial corridor: anti-sway, load weighing and Safe Torque Off (STO). |
+| Period | Work |
+| :---: | :--- |
+| **Ongoing** | Power quality: active filters and voltage conditioners |
+| **2025** | Operations automation with `n8n` and LLM APIs |
+| **2023 to present** | Control-system and DCS integration |
+| **2022** | `ABB ACS880` + `N5050` crane control in Cilegon |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-timeline-dark.svg">
@@ -99,12 +101,6 @@ Selected work from dummjo.dev. End clients are not named here.
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-activity-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-activity-light.svg">
   <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-activity-dark.svg" width="100%" alt="05 On the Bench">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg">
-  <img src="https://raw.githubusercontent.com/dummJo/dummJo/output/pacman-contribution-graph.svg" alt="Contribution graph" width="100%">
 </picture>
 
 <p align="center">
