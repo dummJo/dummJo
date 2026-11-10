@@ -110,7 +110,7 @@ class Fonts:
     def face(self, role, text):
         """An @font-face rule for one role, subset to the characters in text."""
         family, weight, style, fname = FONT_FILES[role]
-        font = TTFont(self.dir / fname)
+        font = TTFont(self.dir / fname, recalcTimestamp=False)   # keep builds byte-identical
         opts = subset.Options()
         opts.flavor = "woff2"
         opts.layout_features = ["kern", "liga", "lnum"]

@@ -8,8 +8,8 @@
 Electrical and automation engineer in Jakarta since 2019: drives, power, software.
 
 <p>
-  <a href="mailto:1437yb@gmail.com?subject=Project%20brief"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-light.svg"><img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-dark.svg" height="44" alt="Email a project brief"></picture></a>&nbsp;
-  <a href="https://dummjo.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-site-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-site-light.svg"><img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-site-dark.svg" height="44" alt="dummjo.dev"></picture></a>
+  <a href="mailto:1437yb@gmail.com?subject=Project%20brief"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-light.svg"><img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-dark.svg" height="48" alt="Email a project brief"></picture></a>&nbsp;
+  <a href="https://dummjo.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-site-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-site-light.svg"><img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-site-dark.svg" height="48" alt="dummjo.dev"></picture></a>
 </p>
 
 <p align="center">
@@ -113,7 +113,7 @@ Electrical and automation engineer in Jakarta since 2019: drives, power, softwar
 
 Have a drive to commission, a power quality problem, or an OT/IT bridge that has to hold? Send a short brief with the site, the equipment, and what has to work.
 
-<a href="mailto:1437yb@gmail.com?subject=Project%20brief"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-light.svg"><img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-dark.svg" height="44" alt="Email a project brief"></picture></a>
+<a href="mailto:1437yb@gmail.com?subject=Project%20brief"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-light.svg"><img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/button-email-dark.svg" height="48" alt="Email a project brief"></picture></a>
 
 *Bahasa Indonesia:* kirim ringkasan singkat: lokasi, peralatan, dan apa yang harus berjalan.
 
