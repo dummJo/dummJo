@@ -56,6 +56,13 @@ Electrical and automation engineer in Jakarta since 2019: drives, power, softwar
   </picture>
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Siemens_PLC-3c2111?style=for-the-badge&logo=siemens&logoColor=e1ceb0" alt="Siemens PLC" height="32">
+  <img src="https://img.shields.io/badge/Allen--Bradley_PLC-3c2111?style=for-the-badge&logo=rockwellautomation&logoColor=e1ceb0" alt="Allen-Bradley PLC" height="32">
+  <img src="https://img.shields.io/badge/ABB_Drives-3c2111?style=for-the-badge&logo=abb&logoColor=e1ceb0" alt="ABB Drives" height="32">
+  <img src="https://img.shields.io/badge/n8n-3c2111?style=for-the-badge&logo=n8n&logoColor=e1ceb0" alt="n8n" height="32">
+</p>
+
 | Field side (OT) | Software side (IT) |
 | :--- | :--- |
 | **Drives:** ABB `ACS580` commissioning, `ACS880` crane deployment | **Web:** `TypeScript`, `Next.js`, `Node.js`, `NestJS` |
