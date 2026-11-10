@@ -281,8 +281,7 @@ def banner(t, F):
 <text x="42" y="218" font-family='{fam_lab}' font-weight="500" font-size="36" fill="{t["ink"]}">{role}</text>
 <text x="42" y="262" font-family='{fam_lab}' font-weight="500" font-size="24" fill="{t["muted"]}">{job_label}</text>
 <text x="42" y="294" font-family='{fam_lab}' font-weight="500" font-size="29" fill="{t["ink"]}">{job}</text>
-<!-- one note in mirror script, as the notebooks were written; decorative, the alt text carries the facts -->
-<text aria-hidden="true" transform="translate(330,334) scale(-1,1)" font-family='{fam_body}' font-style="italic" font-size="21" fill="{t["muted"]}">{note}</text>
+<text x="42" y="334" font-family='{fam_body}' font-style="italic" font-size="22" fill="{t["muted"]}">{note}</text>
 {study(t, 626, 236)}
 {dimension(t, x0, x1, y)}
 <text x="{x0}" y="446" font-family='{fam_mono}' font-weight="500" font-size="26" fill="{t["ink"]}">2019</text>
