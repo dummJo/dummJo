@@ -1,8 +1,8 @@
-<!-- Hallmark · v2.0.0 · redesign: full · theme: blueprint, brownline sheet by request (Leonardo notebook) (dealt 2/3, seed industrial-electrical-automation-engineer-1118·c62eab96·2026-11-09·r0) · dark: night sepia, derived · type: Cormorant Garamond by request, IBM Plex Mono for measurements · signature: the career as a dimension string, 2019 to 2026, a red-chalk cheetah running it · reworded "7+ years in the field" to that dimension string · 63 and 19 named the middle-dot strings and the dash · waive 20, 25, 34, 48, 77: GitHub owns the page CSS and sections · waive 80 and the second-colour do-not: the owner asked for an animal character and to keep Pac-Man, the typing line and the skill icons · waive scroll-following: a README runs no script, so the cheetah advances one step per section header · waive 49b: the client name Prima Transmission wraps at 320px and is not shortened · dropped the PTTS supply catalogue: the owner asked for a personal profile with PTTS as a side note · finish-review: subagent, fix, 8 findings, 6 resolved, 2 partial (phone-width banner variant not shipped: unverified that GitHub keeps width media queries; dimension value kept below the line, the cheetah runs above it) · gap: third-party cards and dark sheet not seen in review captures -->
+<!-- Hallmark · v2.0.0 · redesign: full, second pass · theme: blueprint, brownline sheet by request (Leonardo notebook) · dark: night sepia, derived · type: Cormorant Garamond by request, IBM Plex Mono for measurements · signature: a red-chalk cheetah in a circle and a square (after the Vitruvian figure), and the career as a dimension string, 2019 to 2026 · narrow viewBoxes with large type so the drawings stay readable at phone width · waive 20, 25, 34, 48, 77: GitHub owns the page CSS and sections · waive 80 and the second-colour do-not: the owner asked for an animal character and to keep Pac-Man, the typing line and the skill icons · waive scroll-following: a README runs no script, so the cheetah stands one station further in each section head · waive 49b: the client name Prima Transmission wraps at 320px and is not shortened · merged Field Record into Field Years and cut OT / IT Convergence to five rows: the owner asked for thin project detail -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/banner-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/banner-light.svg">
-  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/banner-dark.svg" width="100%" alt="Adam Muhammad, Vincinian Engineer; day job Presales Engineer at PTTS, Jakarta. Engineered to outrun. In the field from 2019 to 2026.">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/banner-dark.svg" width="100%" alt="Adam Muhammad, Vincinian Engineer; day job Presales Engineer at PTTS. Engineered to outrun. A red-chalk study of a cheetah in a circle and a square, and a career line from 2019 to 2026.">
 </picture>
 
 Electrical and automation engineer in Jakarta since 2019: drives, power, software.
@@ -43,21 +43,10 @@ Electrical and automation engineer in Jakarta since 2019: drives, power, softwar
 - a condition-monitoring dashboard prototype
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-convergence-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-convergence-light.svg">
-  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-convergence-dark.svg" width="100%" alt="02 OT / IT Convergence">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-toolbox-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-toolbox-light.svg">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-toolbox-dark.svg" width="100%" alt="02 Toolbox">
 </picture>
-
-What I do myself, on PTTS projects and in my own engineering tools. My scope runs from technical proposal through commissioning, across industrial automation, power quality and electrical systems.
-
-| Field side (OT) | Software side (IT) |
-| :--- | :--- |
-| **Presales and delivery**<br>Technical proposals, BOQ preparation and product sizing; scope, timeline and change orders during delivery. | **Workflow automation**<br>`n8n` workflows for PTTS operations, with Notion and LLM APIs. |
-| **Drives**<br>Parameter configuration and commissioning of ABB `ACS580`; end-to-end `ACS880` crane deployment. VSD skills also cover Siemens and Danfoss. | **Engineering web tools**<br>`TypeScript`, `Node.js` and `Next.js`: a sizing suite and a monitoring dashboard prototype. |
-| **Crane control**<br>ABB `ACS880` with the `N5050` Crane Control Program: anti-sway, load weighing, hoist control, Safe Torque Off (STO). | **Monitoring**<br>IoT and remote monitoring; vibration alarms with Telegram and WhatsApp alerts (prototype). |
-| **PLC and control systems**<br>PLC programming on Siemens and Allen-Bradley; SCADA and DCS integration; commissioning support. | **Infrastructure**<br>`Docker` and Linux server administration; `PostgreSQL`; apps deployed on Vercel. |
-| **Power quality**<br>THD, harmonic and power-factor analysis; sizing and quotation of active harmonic filters, voltage-sag protection and static frequency converters. | **AI tooling**<br>Exploring LLM API integration: chatbot prototypes, document processing and task automation. |
-| **Electrical**<br>Panel design, single-line diagrams (SLD), commissioning and troubleshooting. | **Python**<br>PLC-migration tooling for ABB AC500 (prototype). |
 
 <p align="center">
   <picture>
@@ -67,40 +56,35 @@ What I do myself, on PTTS projects and in my own engineering tools. My scope run
   </picture>
 </p>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-field-record-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-field-record-light.svg">
-  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-field-record-dark.svg" width="100%" alt="03 Field Record">
-</picture>
-
-Selected work from dummjo.dev. End clients are not named here.
-
-| Period | Work |
-| :---: | :--- |
-| **Ongoing** | Power quality: active filters and voltage conditioners |
-| **2025** | Operations automation with `n8n` and LLM APIs |
-| **2023 to present** | Control-system and DCS integration |
-| **2022** | `ABB ACS880` + `N5050` crane control in Cilegon |
+| Field side (OT) | Software side (IT) |
+| :--- | :--- |
+| **Drives:** ABB `ACS580` commissioning, `ACS880` crane deployment | **Web:** `TypeScript`, `Next.js`, `Node.js`, `NestJS` |
+| **Crane control:** `ACS880` + `N5050`, anti-sway, load weighing, STO | **Data:** `PostgreSQL`, `Prisma`, `Supabase` |
+| **PLC:** Siemens and Allen-Bradley, SCADA and DCS integration | **Automation:** `n8n`, LLM APIs, `Python` |
+| **Power quality:** THD analysis, filter sizing and quotation | **Infrastructure:** `Docker`, Linux, Vercel, GitHub Actions |
+| **Electrical:** panel design, single-line diagrams, troubleshooting | **Scripting:** `Bash` |
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-timeline-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-timeline-light.svg">
-  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-timeline-dark.svg" width="100%" alt="04 Field Years">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-years-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-years-light.svg">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-years-dark.svg" width="100%" alt="03 Field Years">
 </picture>
 
 | Year | Milestone |
 | :---: | :--- |
-| **2018** | **Casio Thailand**, four-month industrial internship in Nakhon Ratchasima (Indonesian Education Ministry overseas internship programme) |
-| **2019** | **Electrical engineer** on job sites across Java: power distribution, motor control, industrial wiring |
-| **2020** | **ABB `ACS580`**, first solo VSD commissioning |
-| **2022** | **ABB `ACS880` + `N5050` crane control** in Cilegon |
-| **2024** | **Channel Partner Expert Day** in Shanghai, representing PTTS |
-| **2025 to present** | **Presales engineer and system integrator** at PTTS, Jakarta |
+| **2018** | Casio Thailand, four-month industrial internship |
+| **2019** | Electrical engineer on job sites across Java |
+| **2020** | First solo VSD commissioning, an ABB `ACS580` |
+| **2022** | `ACS880` + `N5050` crane control in Cilegon |
+| **2023 to present** | Control-system and DCS integration |
+| **2024** | Channel Partner Expert Day in Shanghai, representing PTTS |
+| **2025 to present** | Presales engineer and system integrator at PTTS; operations automation with `n8n` |
+| **Ongoing** | Power quality: active filters and voltage conditioners |
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-activity-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-activity-light.svg">
-  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-activity-dark.svg" width="100%" alt="05 On the Bench">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-bench-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-bench-light.svg">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-bench-dark.svg" width="100%" alt="04 On the Bench">
 </picture>
 
 <p align="center">
@@ -124,7 +108,7 @@ Selected work from dummjo.dev. End clients are not named here.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-contact-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-contact-light.svg">
-  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-contact-dark.svg" width="100%" alt="06 Start a Project">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/header-contact-dark.svg" width="100%" alt="05 Start a Project">
 </picture>
 
 Have a drive to commission, a power quality problem, or an OT/IT bridge that has to hold? Send a short brief with the site, the equipment, and what has to work.
@@ -140,5 +124,5 @@ Based in Jakarta, working on site or remote. [LinkedIn](https://linkedin.com/in/
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/footer-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/footer-light.svg">
-  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/footer-dark.svg" width="100%" alt="Three-phase supply, L1 L2 L3">
+  <img src="https://raw.githubusercontent.com/dummJo/dummJo/main/assets/footer-dark.svg" width="100%" alt="Three-phase supply, L1 L2 L3, and the cheetah at the finish post">
 </picture>
