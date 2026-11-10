@@ -159,25 +159,34 @@ CHEETAH_DOTS = ((38, 22), (48, 20), (58, 19), (68, 19), (78, 21),
                 (44, 26), (54, 25), (64, 25), (74, 26))
 
 
-def cheetah(t, pose="run"):
-    """Return the cheetah group. pose 'run' swaps the two poses; 'a' or 'b' holds one."""
+def cheetah(t, pose="run", sw=2.0, hatch=False):
+    """The cheetah group. 'run' swaps the two gallop poses; 'a' or 'b' holds one;
+    'both' lays the gathered pose faintly over the extended one, the way the
+    Vitruvian figure carries two stances in one drawing."""
     ink = t["chalk"]   # Leonardo's animal studies are red chalk
-    common = (f'fill="none" stroke="{ink}" stroke-width="2" '
+    common = (f'fill="none" stroke="{ink}" stroke-width="{sw}" '
               f'stroke-linecap="round" stroke-linejoin="round"')
     head = "".join(f'<path d="{d}"/>' for d in CHEETAH_HEAD)
     dots = "".join(f'<circle cx="{x}" cy="{y}" r="1.4" fill="{ink}" stroke="none"/>' for x, y in CHEETAH_DOTS)
     eye = f'<circle cx="112" cy="13" r="1.3" fill="{ink}" stroke="none"/>'
 
-    def frame(key, cls):
+    def frame(key, attrs):
         body = "".join(f'<path d="{d}"/>' for d in CHEETAH_BODY[key])
         legs = "".join(f'<path d="{d}"/>' for d in CHEETAH_LEGS[key])
-        return f'<g class="{cls}">{body}{legs}</g>'
+        return f'<g {attrs}>{body}{legs}</g>'
 
     if pose == "run":
-        frames = frame("a", "pose-a") + frame("b", "pose-b")
+        frames = frame("a", 'class="pose-a"') + frame("b", 'class="pose-b"')
+    elif pose == "both":
+        frames = frame("b", 'opacity="0.38"') + frame("a", "")
     else:
-        frames = frame(pose, "pose-still")
-    return f'<g {common}>{frames}{head}{dots}{eye}</g>'
+        frames = frame(pose, "")
+    shade = ""
+    if hatch:   # left-handed hatching: strokes fall from upper left to lower right
+        shade = "".join(f'<line x1="{x}" y1="{y}" x2="{x + 3.2}" y2="{y + 4.6}" stroke-width="{sw * 0.5}" opacity="0.7"/>'
+                        for x, y in ((25, 25), (28, 24.4), (31, 24), (34, 23.7), (80, 25), (83, 25.6), (86, 26.4),
+                                     (91, 21), (94, 19.2), (97, 17.6)))
+    return f'<g {common}>{frames}{head}{shade}{dots}{eye}</g>'
 
 
 GALLOP_CSS = """
@@ -203,15 +212,13 @@ def rgba(hex_, a):
     return f"rgba({r},{g},{b},{a})"
 
 
-def sheet(w, h, t, double=True):
-    """The drafting sheet: ground plus a square keyline (and a second one 5px in)."""
-    out = (f'<rect width="{w}" height="{h}" fill="{t["paper"]}"/>'
-           f'<rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" fill="none" '
-           f'stroke="{rgba(t["ink"], t["rule_a"])}"/>')
-    if double:
-        out += (f'<rect x="5.5" y="5.5" width="{w - 11}" height="{h - 11}" fill="none" '
-                f'stroke="{rgba(t["ink"], t["rule2_a"])}"/>')
-    return out
+def sheet(w, h, t):
+    """The notebook page: ground plus a square keyline and a second one 5px in."""
+    return (f'<rect width="{w}" height="{h}" fill="{t["paper"]}"/>'
+            f'<rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" fill="none" '
+            f'stroke="{rgba(t["ink"], t["rule_a"])}"/>'
+            f'<rect x="5.5" y="5.5" width="{w - 11}" height="{h - 11}" fill="none" '
+            f'stroke="{rgba(t["ink"], t["rule2_a"])}"/>')
 
 
 def dimension(t, x0, x1, y, tick=14):
@@ -226,20 +233,40 @@ def dimension(t, x0, x1, y, tick=14):
             f'<line x1="{x1 - d}" y1="{y + d}" x2="{x1 + d}" y2="{y - d}"/></g>')
 
 
+def study(t, cx, cy, r=104, side=168, k=1.72):
+    """The cheetah set in a circle and a square, after the Vitruvian figure: the
+    square stands on the circle's lowest point, the extended stride reaches the
+    circle, the gathered stride sits inside the square."""
+    c = rgba(t["ink"], 0.55)
+    c2 = rgba(t["ink"], t["rule2_a"])
+    sq_x, sq_y = cx - side / 2, cy + r - side
+    return (f'<g fill="none" stroke-width="1">'
+            f'<circle cx="{cx}" cy="{cy}" r="{r}" stroke="{c}"/>'
+            f'<rect x="{sq_x}" y="{sq_y}" width="{side}" height="{side}" stroke="{c}"/>'
+            f'<line x1="{cx}" y1="{cy - r - 8}" x2="{cx}" y2="{cy + r + 8}" stroke="{c2}"/>'
+            f'<line x1="{cx - r - 8}" y1="{cy}" x2="{cx + r + 8}" y2="{cy}" stroke="{c2}"/></g>'
+            f'<g transform="translate({cx - 60 * k:.1f},{cy - 30 * k + 4:.1f}) scale({k})">'
+            f'{cheetah(t, pose="both", sw=1.25, hatch=True)}</g>')
+
+
 # ---------------------------------------------------------------- assets
+# Banner, heads and footer use a narrow viewBox with large type on purpose: a
+# README image scales with the column, to about 0.45x on a phone, and the type
+# has to stay readable there.
 
 def banner(t, F):
-    """Title block: name, tagline, and the career as a dimension string 2019 to 2026,
-    the cheetah running its length."""
-    w, h = 960, 360
+    """The notebook page: name, role, the Vitruvian cheetah study, and the career
+    as a dimension string from 2019 to 2026 with the cheetah running its length."""
+    w, h = 800, 460
     name, tag = "ADAM MUHAMMAD", "Engineered to outrun."
-    roles = [("Role", "Vincinian Engineer"), ("Day job", "Presales Engineer, PTTS")]
+    role, job_label, job = "Vincinian Engineer", "Day job", "Presales Engineer, PTTS"
+    note = "study of a cheetah at full stride"
     span = "7 YEARS IN THE FIELD"
     f_disp, fam_disp = F.face("display", name + span)
-    f_body, fam_body = F.face("body", tag)
-    f_lab, fam_lab = F.face("label", "".join(a + b for a, b in roles))
+    f_body, fam_body = F.face("body", tag + note)
+    f_lab, fam_lab = F.face("label", role + job_label + job)
     f_mono, fam_mono = F.face("mono", "20196")
-    x0, x1, y = 96, 864, 262
+    x0, x1, y = 60, 740, 408
     run_px = x1 - x0 - 124
     style = (f_disp + f_body + f_lab + f_mono + GALLOP_CSS +
              f".run{{animation:run 7s linear infinite}}"
@@ -247,65 +274,66 @@ def banner(t, F):
              f"88%{{opacity:1}}100%{{transform:translateX({run_px}px);opacity:0}}}}"
              f".draw{{transform-box:fill-box;transform-origin:left;animation:draw 1.2s cubic-bezier(.2,.7,.2,1) both}}"
              f"@keyframes draw{{from{{transform:scaleX(0)}}to{{transform:scaleX(1)}}}}")
-    cells = []
-    bx, by, cw, ch = 568, 44, 344, 62
-    for i, (label, value) in enumerate(roles):
-        cy = by + i * ch
-        cells.append(f'<rect x="{bx}" y="{cy}" width="{cw}" height="{ch}" fill="none" '
-                     f'stroke="{rgba(t["ink"], t["rule_a"])}"/>'
-                     f'<text x="{bx + 14}" y="{cy + 22}" font-family=\'{fam_lab}\' font-weight="500" '
-                     f'font-size="20" fill="{t["muted"]}">{label}</text>'
-                     f'<text x="{bx + 14}" y="{cy + 50}" font-family=\'{fam_lab}\' font-weight="500" '
-                     f'font-size="27" fill="{t["ink"]}">{value}</text>')
     body = f'''{sheet(w, h, t)}
-<text x="48" y="122" font-family='{fam_disp}' font-weight="600" font-size="52" letter-spacing="0.5" fill="{t["ink"]}">{name}</text>
-<text x="50" y="172" font-family='{fam_body}' font-style="italic" font-size="34" fill="{t["ink2"]}">{tag}</text>
-{"".join(cells)}
+<text x="40" y="88" font-family='{fam_disp}' font-weight="600" font-size="64" letter-spacing="0.5" fill="{t["ink"]}">{name}</text>
+<text x="42" y="142" font-family='{fam_body}' font-style="italic" font-size="38" fill="{t["ink2"]}">{tag}</text>
+<line x1="42" y1="172" x2="400" y2="172" stroke="{rgba(t["ink"], t["rule2_a"])}"/>
+<text x="42" y="218" font-family='{fam_lab}' font-weight="500" font-size="36" fill="{t["ink"]}">{role}</text>
+<text x="42" y="262" font-family='{fam_lab}' font-weight="500" font-size="24" fill="{t["muted"]}">{job_label}</text>
+<text x="42" y="294" font-family='{fam_lab}' font-weight="500" font-size="29" fill="{t["ink"]}">{job}</text>
+<!-- one note in mirror script, as the notebooks were written; decorative, the alt text carries the facts -->
+<text aria-hidden="true" transform="translate(330,334) scale(-1,1)" font-family='{fam_body}' font-style="italic" font-size="21" fill="{t["muted"]}">{note}</text>
+{study(t, 626, 236)}
 {dimension(t, x0, x1, y)}
-<text x="{x0}" y="308" font-family='{fam_mono}' font-weight="500" font-size="21" fill="{t["ink"]}" text-anchor="middle">2019</text>
-<text x="{x1}" y="308" font-family='{fam_mono}' font-weight="500" font-size="21" fill="{t["ink"]}" text-anchor="middle">2026</text>
-<text x="{(x0 + x1) / 2}" y="308" font-family='{fam_disp}' font-weight="600" font-size="30" letter-spacing="1" style="font-variant-numeric:lining-nums" fill="{t["ink"]}" text-anchor="middle">{span}</text>
+<text x="{x0}" y="446" font-family='{fam_mono}' font-weight="500" font-size="26" fill="{t["ink"]}">2019</text>
+<text x="{x1}" y="446" font-family='{fam_mono}' font-weight="500" font-size="26" fill="{t["ink"]}" text-anchor="end">2026</text>
+<text x="{(x0 + x1) / 2}" y="446" font-family='{fam_disp}' font-weight="600" font-size="30" letter-spacing="1" style="font-variant-numeric:lining-nums" fill="{t["ink"]}" text-anchor="middle">{span}</text>
 <g transform="translate({x0 + 4},{y - 57})"><g class="run">{cheetah(t)}</g></g>'''
-    return svg(w, h, body, "Adam Muhammad, Vincinian Engineer; day job Presales Engineer at PTTS, Jakarta. Engineered to outrun. In the field from 2019 to 2026.", style)
+    return svg(w, h, body, "Adam Muhammad, Vincinian Engineer; day job Presales Engineer at PTTS. Engineered to outrun. "
+               "A red-chalk study of a cheetah in a circle and a square, and a career line from 2019 to 2026.", style)
 
 
 SECTIONS = [
-    ("projects",     "01", "Things Built"),
-    ("convergence",  "02", "OT / IT Convergence"),
-    ("field-record", "03", "Field Record"),
-    ("timeline",     "04", "Field Years"),
-    ("activity",     "05", "On the Bench"),
-    ("contact",      "06", "Start a Project"),
+    ("projects", "01", "Things Built"),
+    ("toolbox",  "02", "Toolbox"),
+    ("years",    "03", "Field Years"),
+    ("bench",    "04", "On the Bench"),
+    ("contact",  "05", "Start a Project"),
 ]
 
 
 def header(t, F, index, title, step, steps):
-    """A sheet-numbered section head. The cheetah's place on the track advances one
-    step per section, so it keeps pace with a reader scrolling down the profile."""
-    w, h = 900, 96
+    """A numbered head with no filled ground: type, a rule, and the cheetah's track.
+    The cheetah stands one station further in each head, so it keeps pace with a
+    reader scrolling down the profile (a README cannot run a script)."""
+    w, h = 720, 92
     f_disp, fam_disp = F.face("display", title.upper())
     f_mono, fam_mono = F.face("mono", index)
-    tx0, tx1, ty = 640, 892, 80
-    scale = 0.65
+    tx0, tx1, ty = 484, 712, 76
+    scale = 0.6
     cw = 120 * scale
-    x = tx0 + (tx1 - tx0 - cw) * step / steps
-    # No filled ground: the theme keeps one sheet a page (the banner); a head is type and a rule.
-    body = f'''<line x1="0" y1="{h - 1}" x2="{w}" y2="{h - 1}" stroke="{rgba(t["ink"], t["rule_a"])}" stroke-width="1"/>
-<text x="0" y="66" font-family='{fam_mono}' font-weight="500" font-size="26" fill="{t["ink"]}">{index}</text>
-<text x="56" y="68" font-family='{fam_disp}' font-weight="600" font-size="44" letter-spacing="0.5" fill="{t["ink"]}">{title.upper()}</text>
-<line x1="{tx0}" y1="{ty}" x2="{tx1}" y2="{ty}" stroke="{rgba(t["ink"], t["rule2_a"])}" stroke-width="1"/>
-<line x1="{tx0}" y1="{ty}" x2="{x + cw / 2:.1f}" y2="{ty}" stroke="{rgba(t["ink"], t["rule_a"])}" stroke-width="2"/>
-<line x1="{tx1}" y1="{ty - 8}" x2="{tx1}" y2="{ty + 8}" stroke="{rgba(t["ink"], t["rule_a"])}" stroke-width="1"/>
-<g transform="translate({x:.1f},{ty - 57 * scale}) scale({scale})">{cheetah(t)}</g>'''
+    x = tx0 + (tx1 - tx0 - cw) * step / (steps - 1)
+    rule, rule2 = rgba(t["ink"], t["rule_a"]), rgba(t["ink"], t["rule2_a"])
+    stations = "".join(
+        f'<line x1="{tx0 + cw / 2 + (tx1 - tx0 - cw) * i / (steps - 1):.1f}" y1="{ty - 4}" '
+        f'x2="{tx0 + cw / 2 + (tx1 - tx0 - cw) * i / (steps - 1):.1f}" y2="{ty + 4}" stroke="{rule}"/>'
+        for i in range(steps))
+    body = f'''<line x1="0" y1="{h - 1}" x2="{w}" y2="{h - 1}" stroke="{rule}" stroke-width="1"/>
+<text x="0" y="64" font-family='{fam_mono}' font-weight="500" font-size="26" fill="{t["ink"]}">{index}</text>
+<text x="54" y="66" font-family='{fam_disp}' font-weight="600" font-size="44" letter-spacing="0.5" fill="{t["ink"]}">{title.upper()}</text>
+<line x1="{tx0}" y1="{ty}" x2="{tx1}" y2="{ty}" stroke="{rule2}" stroke-width="1"/>
+<line x1="{tx0}" y1="{ty}" x2="{x + cw / 2:.1f}" y2="{ty}" stroke="{rule}" stroke-width="2"/>
+{stations}
+<g transform="translate({x:.1f},{ty - 57 * scale:.1f}) scale({scale})">{cheetah(t, sw=2.4)}</g>'''
     return svg(w, h, body, f"{index} {title}", f_disp + f_mono + GALLOP_CSS)
 
 
 def footer(t, F):
-    """Three-phase supply drawn to drafting convention (solid, dashed, dotted), and the
-    cheetah arrived at the finish post."""
-    w, h, lam, amp, base = 900, 150, 225, 22, 52
+    """Three-phase supply in drafting line types (solid, dashed, dotted), and the
+    cheetah standing at the finish post."""
+    w, h, lam, amp, base = 720, 150, 180, 20, 50
     labels = ("L1", "L2", "L3")
-    f_lab, fam_lab = F.face("mono", "".join(labels))   # phase numbers are drawing numbers: mono
+    f_mono, fam_mono = F.face("mono", "".join(labels))
     dashes = ("", ' stroke-dasharray="10 6"', ' stroke-dasharray="1.5 5"')
     waves = []
     for shift, dash in zip((0, 120, 240), dashes):
@@ -313,27 +341,27 @@ def footer(t, F):
                        for x in range(0, w + lam + 1, 3))
         waves.append(f'<path d="M{pts}" fill="none" stroke="{t["ink"]}" stroke-width="1.8"'
                      f' stroke-linecap="round"{dash}/>')
-    legend, lx = [], 330
+    legend, lx = [], 226
     for label, dash in zip(labels, dashes):
-        legend.append(f'<line x1="{lx}" y1="126" x2="{lx + 22}" y2="126" stroke="{t["ink"]}" '
+        legend.append(f'<line x1="{lx}" y1="128" x2="{lx + 26}" y2="128" stroke="{t["ink"]}" '
                       f'stroke-width="2" stroke-linecap="round"{dash}/>'
-                      f'<text x="{lx + 30}" y="131" font-family=\'{fam_lab}\' font-weight="500" '
-                      f'font-size="15" fill="{t["ink"]}">{label}</text>')
-        lx += 80
-    post_x = 870
-    style = (f_lab + GALLOP_CSS +
+                      f'<text x="{lx + 34}" y="135" font-family=\'{fam_mono}\' font-weight="500" '
+                      f'font-size="20" fill="{t["ink"]}">{label}</text>')
+        lx += 96
+    post_x = 700
+    style = (f_mono + GALLOP_CSS +
              f".drift{{animation:drift 12s linear infinite}}"
              f"@keyframes drift{{from{{transform:translateX(0)}}to{{transform:translateX(-{lam}px)}}}}")
     body = f'''<defs>
-  <linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="#000"/><stop offset="0.1" stop-color="#fff"/><stop offset="0.62" stop-color="#fff"/><stop offset="0.74" stop-color="#000"/></linearGradient>
+  <linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="#000"/><stop offset="0.1" stop-color="#fff"/><stop offset="0.6" stop-color="#fff"/><stop offset="0.74" stop-color="#000"/></linearGradient>
   <mask id="edges" maskUnits="userSpaceOnUse" x="0" y="0" width="{w}" height="96"><rect width="{w}" height="96" fill="url(#fade)"/></mask>
 </defs>
 <g mask="url(#edges)"><g class="drift">{"".join(waves)}</g></g>
-<line x1="{post_x}" y1="40" x2="{post_x}" y2="104" stroke="{t["ink"]}" stroke-width="1.5"/>
-<line x1="{post_x - 5}" y1="109" x2="{post_x + 5}" y2="99" stroke="{t["ink"]}" stroke-width="1.5"/>
-<g transform="translate({post_x - 128},{104 - 57})">{cheetah(t, pose="a")}</g>
+<line x1="{post_x}" y1="36" x2="{post_x}" y2="100" stroke="{t["ink"]}" stroke-width="1.5"/>
+<line x1="{post_x - 5}" y1="105" x2="{post_x + 5}" y2="95" stroke="{t["ink"]}" stroke-width="1.5"/>
+<g transform="translate({post_x - 128},{100 - 57})">{cheetah(t, pose="a")}</g>
 {"".join(legend)}'''
-    return svg(w, h, body, "Three-phase supply, L1 L2 L3, and the cheetah at the finish", style)
+    return svg(w, h, body, "Three-phase supply, L1 L2 L3, and the cheetah at the finish post", style)
 
 
 def button(t, F, label, w, primary):
@@ -346,8 +374,8 @@ def button(t, F, label, w, primary):
         face = (f'<rect width="{w}" height="{h}" fill="{t["paper"]}"/>'
                 f'<rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" fill="none" stroke="{t["ink"]}"/>')
         ink = t["ink"]
-    body = (f'{face}<text x="{w / 2}" y="30" text-anchor="middle" fill="{ink}" '
-            f'font-family=\'{fam}\' font-weight="500" font-size="20">{label}</text>')
+    body = (f'{face}<text x="{w / 2}" y="31" text-anchor="middle" fill="{ink}" '
+            f'font-family=\'{fam}\' font-weight="500" font-size="21">{label}</text>')
     return svg(w, h, body, label, f_lab)
 
 
@@ -361,6 +389,8 @@ def main():
     F = Fonts(ap.parse_args().fonts)
     print("palette contrast:")
     check_palette()
+    for old in ASSETS.glob("header-*.svg"):   # heads are regenerated from SECTIONS; drop renamed ones
+        old.unlink()
     written = []
     for name, t in SHEETS.items():
         files = {f"banner-{name}.svg": banner(t, F), f"footer-{name}.svg": footer(t, F)}
